@@ -1,3 +1,17 @@
 Descripcion del laboratorio:
 
-Este proyecto consiste en realizar un análisis de vulnerabilidades a la aplicación insegura OWASP Juice Shop utilizando OWASP ZAP. El objetivo es identificar vulnerabilidades comunes del OWASP Top 10, evaluarlas y proponer recomendaciones de mitigación.
+OWASP Juice shop es un sitio web vulnerable creado para aprender a detectar vulnerabilidades web comunes
+OWASP ZAP es una herramienta de ciberseguridad diseñada para detectar vulnerabilidades en sitios web.
+
+
+
+Este proyecto consiste en realizar un análisis de vulnerabilidades a la aplicación insegura OWASP Juice Shop utilizando la herramienta de deteccion de deteccion de vulnerabilidades web OWASP ZAP. 
+El objetivo es identificar vulnerabilidades comunes del OWASP Top 10, evaluarlas y proponer recomendaciones de mitigación.
+
+Entorno y herramientas utilizadas:
+
+OWASP Juice Shop 
+
+OWASP ZAP (versión 2.16.1)
+
+Kali linux
