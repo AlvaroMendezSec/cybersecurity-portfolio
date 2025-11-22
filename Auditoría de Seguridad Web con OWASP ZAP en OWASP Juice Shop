@@ -1,2 +1,3 @@
 Descripcion del laboratorio:
 
+Este proyecto consiste en realizar un análisis de vulnerabilidades a la aplicación insegura OWASP Juice Shop utilizando OWASP ZAP. El objetivo es identificar vulnerabilidades comunes del OWASP Top 10, evaluarlas y proponer recomendaciones de mitigación.
