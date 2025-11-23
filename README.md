@@ -13,10 +13,10 @@ Este portafolio contiene mis proyectos prácticos relacionados con:
 Mi objetivo actual es desarrollarme como Consultor/Pentester Junior.
 
 ## Proyectos
-1. **Análisis de vulnerabilidades – Web App PHP (Local)**
+1. **Análisis de vulnerabilidades DAST y SAST Web App PHP (Local)**
    - OWASP Top 10
    - Uso de OWASP ZAP
-   - Identificación y documentación de fallos
+   - Identificación y documentación de fallos y vulnerabilidades
 
 2. **SQL Injection básico en entorno controlado**
    - Montado con DVWA
@@ -29,7 +29,6 @@ Mi objetivo actual es desarrollarme como Consultor/Pentester Junior.
 4. **Pentesting básico – DVWA o OWASP Juice Shop**
    - Ataques controlados
    - Reportes con metodología PTES
-
 
 ## 📬 Contacto
 - LinkedIn: https://www.linkedin.com/in/alvaro-mendez-mesen-a55526258/
