@@ -31,8 +31,148 @@ Impacto:
 - Manipulacion o borrado de informacion
 - Posible escalacion a comprometer la base de datos completa
 
-RecomendacionesÑ
+Recomendaciones:
 - Utilizar consultas preparadas/parametrizadas
 - Evitar concatenacion de entradas del usuario
 - Implementar validaciones estrictas del lado del servidor
 - Minimizar privilegios del usuario o base de datos
+
+2) Content security Policy (CSP) Header not set
+
+Severidad: Alta
+Descripción: La aplicacion no define una politica de seguridad de contenido (CSP), dejando el navegador sin restricciones sobre que fuentes externas puede cargar.
+
+Impacto:
+- Amplifica el daño de un atque Cross Site Scripting (XSS)
+- Permite carga de scripts maliciosos externos
+
+Recomendación: Implementar CSP mínimo como:
+content-Security-Policy: Default-src 'self';
+
+3) Cross-Domain missconfiguration (CORS)
+
+Severidad: Alta
+Descripción: La configuracion CORS permite accesos desde origenes no controlados
+
+Impacto:
+- Sitios externos pueden realizar peticiones autenticadas
+- Riesgo de robo de informacion via CORS
+
+Recomendacion:
+- Restringir CORS a dominios especificos
+- Evitar [Acces-Control-Allow-Origin:] * Cuando se usan cookies o tokens
+
+4) Missing Anti-clickjacking Header
+
+Severidad: Media
+Descripcion: La aplicacion no previene ser incrustada en iframes por sitios externos
+
+Impacto: Riesgo de ataques de clickjacking
+
+Recomendacion:
+Agregar: "X-FRAME-Options: DENY" o "Content-Security-Policy: frame-ancestors 'none';"
+
+5) Session ID in URL Rewrite
+Severidad: Alta
+Descripcion: La sesion del usuario aparece en la URL, exponiendo el identificador de sesion
+
+Impacto:
+- Robo facil de sesion via logs, historial o referer
+- Secuestro de sesion
+
+Recomendacion:
+- Almacenar sesiones unicamente en cookies seguras
+- Usar flags "httponly", "Secure", "SameSite"
+
+6) Vulnerabilidad javascript en libreria
+Severidad: Se encontraron versiones antiguas o vulnerables de librerias JS
+
+Impacto:
+- Posible ejecucion de codigo malicioso
+- Riesgo adicional si se combina con un ataque XSS
+
+Recomendacion: 
+- Actualizar librerias a sus ultimas versiones
+- Implementar auditoria continua de dependencias
+
+7) Cross-Domain JavaScript source file inclusion
+Severidad: Media
+Descripcion: Se cargan archivos JS desde dominios no controlados.
+
+Impacto: 
+- Si un dominio es comprometido, se compromete la aplicacion
+- Riesgo de inyeccion de codigo
+
+Recomendacion:
+- Servir scripts desde el dominio propio
+- Utilizar Subresource Integrity (SRI)
+
+8) Private IP Disclosure
+Severidad: baja
+Descripcion: La aplicacion expone direcciones IP privadas en mensajes o respuestas
+
+Impacto:
+- Filtracion de informacion interna
+- Facilita reconocimiento para ataques dirigidos
+
+Recomendacion:
+- Sanitizar mensajes de error
+- Evitar exponer informacion de infraestructura
+
+9) Server Version Disclosure (Server Header)
+
+Severidad: Baja
+Descripcion: El header Server revela version y tecnologia del servidor
+
+Impacto:
+- Un atacante puede identificar vulnerabilidades especificas de esa version
+
+Recomendacion:
+- Ocultar informacion del servidor. Ejemplo: (Nginx)
+
+10) Strict-Transport-Security Header Not Set (HSTS)
+
+Severidad: Alta
+Descripcion: No se esta aplicando HSTS, permitiendo conexiones no cifradas
+
+Impacto:
+- Vulnerable a ataques como SSL stripping
+- Posibilidad de exponer trafico sensible
+
+Recomendacion:
+- Agregar: "Strict-Transport-Security: max-age=31536000"; includeSubDomains; preload
+
+11) Timestamp Disclosure - Unix
+
+Severidad: baja
+Descripcion: La aplicacion expone timestamps Unix en sus respuestas
+
+Impacto:
+- Puede revelar Informacion interna o patrones del sistema
+- No suele ser critico pero se reporta por buenas practicas de programacion
+
+Recomendacion:
+- Evitar mostrar timestamps inncesarios
+- Usar formatos de fecha amigables para el usuario
+
+12) X-Content-Type-Options Header Missing
+severidad: Media
+Descripcion: Falta el header que indica al navegador no interpretar archivos como otro tipo MIME [Man in the Middle]
+
+Impacto:
+- Riesgo de ataques MIME-sniffig que pueden derivar en XSS
+
+Recomendacion:
+- Agregar: "X-content-Type-options: nosniff"
+
+CONCLUSION:
+El análisis DAST reveló un conjunto significativo de vulnerabilidades relacionadas con configuraciones inseguras, manejo incorrecto de sesiones, exposición de información sensible y falta de controles en el navegador.  
+La aplicación OWASP Juice Shop está diseñada para ser vulnerable, por lo que estos hallazgos eran esperables; sin embargo, este ejercicio demuestra capacidad para:
+
+- Identificar vulnerabilidades reales
+
+- Comprender su impacto
+
+- Proponer acciones de mitigación siguiendo mejores prácticas
+
+- Documentar hallazgos de forma profesional
