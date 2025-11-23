@@ -20,6 +20,21 @@ Estas fallas abarcan desde problemas de configuración, exposición innecesaria 
 
 El objetivo de este reporte es presentar cada hallazgo, su impacto potencial y recomendaciones específicas de mitigación siguiendo buenas prácticas de seguridad, estándares OWASP y configuraciones seguras modernas.
 
+Resumen de vulnerabilidades detectadas
+#	Vulnerabilidad	Severidad
+1	SQL Injection	🔴 Alta
+2	Content-Security-Policy Header Not Set	🔴 Alta
+3	Cross-Domain Misconfiguration (CORS)	🔴 Alta
+4	Missing Anti-clickjacking Header	🟡 Media
+5	Session ID in URL Rewrite	🔴 Alta
+6	Vulnerable JavaScript Library	🟡 Media
+7	Cross-Domain JavaScript Source File Inclusion	🟡 Media
+8	Private IP Disclosure	🟢 Baja
+9	Server Version Disclosure	🟢 Baja
+10	Strict-Transport-Security Header Not Set (HSTS)	🔴 Alta
+11	Timestamp Disclosure (Unix)	🟢 Baja
+12	X-Content-Type-Options Header Missing	🟡 Media
+
 Vulnerabilidades encontradas
 
 1)SQL injection
