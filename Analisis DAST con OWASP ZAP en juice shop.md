@@ -14,7 +14,7 @@ OWASP Juice Shop en entorno local
 OWASP ZAP (versión 2.16.1)
 
 Kali linux
---- 
+
 Durante la evaluación dinámica del entorno OWASP Juice Shop utilizando OWASP ZAP, se identificaron múltiples vulnerabilidades que afectan la seguridad, integridad y privacidad de la aplicación. 
 Estas fallas abarcan desde problemas de configuración, exposición innecesaria de información y uso de librerías vulnerables, hasta debilidades que pueden permitir ataques más serios como SQL Injection o Clickjacking.
 
