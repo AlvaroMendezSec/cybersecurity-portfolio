@@ -30,7 +30,6 @@ Mi objetivo actual es desarrollarme como Consultor/Pentester Junior.
    - Ataques controlados
    - Reportes con metodología PTES
 
----
 
 ## 📬 Contacto
 - LinkedIn: https://www.linkedin.com/in/alvaro-mendez-mesen-a55526258/
