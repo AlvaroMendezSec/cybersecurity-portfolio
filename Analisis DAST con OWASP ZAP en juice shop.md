@@ -25,6 +25,7 @@ Vulnerabilidades encontradas
 1)SQL injection
 
 Severidad: Alta
+
 Descripcion: Se detectó que ciertos puntos de entrada permiten la inyeccion de codigo sql, lo podria manipular las consultas ejecutadas por la aplicacion
 
 Impacto: 
