@@ -20,3 +20,19 @@ Estas fallas abarcan desde problemas de configuración, exposición innecesaria 
 El objetivo de este reporte es presentar cada hallazgo, su impacto potencial y recomendaciones específicas de mitigación siguiendo buenas prácticas de seguridad, estándares OWASP y configuraciones seguras modernas.
 
 Vulnerabilidades encontradas
+
+1)SQL injection
+
+Severidad: Alta
+Descripcion: Se detectó que ciertos puntos de entrada permiten la inyeccion de codigo sql, lo podria manipular las consultas ejecutadas por la aplicacion
+
+Impacto: 
+- Acceso no autorizado a datos sensibles
+- Manipulacion o borrado de informacion
+- Posible escalacion a comprometer la base de datos completa
+
+RecomendacionesÑ
+- Utilizar consultas preparadas/parametrizadas
+- Evitar concatenacion de entradas del usuario
+- Implementar validaciones estrictas del lado del servidor
+- Minimizar privilegios del usuario o base de datos
