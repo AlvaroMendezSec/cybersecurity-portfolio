@@ -1,4 +1,4 @@
-Descripcion del laboratorio:
+# Descripcion del laboratorio:
 
 OWASP Juice shop es un sitio web vulnerable creado para aprender a detectar vulnerabilidades web comunes
 
@@ -7,7 +7,7 @@ OWASP ZAP es una herramienta de ciberseguridad diseñada para detectar vulnerabi
 Este proyecto consiste en realizar un análisis de vulnerabilidades a la aplicación insegura OWASP Juice Shop utilizando la herramienta de deteccion de vulnerabilidades web OWASP ZAP. 
 El objetivo es identificar vulnerabilidades comunes del OWASP Top 10, evaluarlas y proponer recomendaciones de mitigación.
 
-Entorno y herramientas utilizadas:
+# Entorno y herramientas utilizadas:
 
 OWASP Juice Shop en entorno local
 
@@ -20,9 +20,9 @@ Estas fallas abarcan desde problemas de configuración, exposición innecesaria 
 
 El objetivo de este reporte es presentar cada hallazgo, su impacto potencial y recomendaciones específicas de mitigación siguiendo buenas prácticas de seguridad, estándares OWASP y configuraciones seguras modernas.
 
-Vulnerabilidades encontradas
+# Vulnerabilidades encontradas
 
-1)SQL injection
+## 1)SQL injection
 
 Severidad: Alta
 
@@ -39,7 +39,7 @@ Recomendaciones:
 - Implementar validaciones estrictas del lado del servidor
 - Minimizar privilegios del usuario o base de datos
 
-2) Content security Policy (CSP) Header not set
+## 2) Content security Policy (CSP) Header not set
 
 Severidad: Alta
 
@@ -52,7 +52,7 @@ Impacto:
 Recomendación: Implementar CSP mínimo como:
 content-Security-Policy: Default-src 'self';
 
-3) Cross-Domain missconfiguration (CORS)
+## 3) Cross-Domain missconfiguration (CORS)
 
 Severidad: Alta
 
@@ -66,7 +66,7 @@ Recomendacion:
 - Restringir CORS a dominios especificos
 - Evitar [Acces-Control-Allow-Origin:] * Cuando se usan cookies o tokens
 
-4) Missing Anti-clickjacking Header
+## 4) Missing Anti-clickjacking Header
 
 Severidad: Media
 
@@ -77,7 +77,7 @@ Impacto: Riesgo de ataques de clickjacking
 Recomendacion:
 Agregar: "X-FRAME-Options: DENY" o "Content-Security-Policy: frame-ancestors 'none';"
 
-5) Session ID in URL Rewrite
+## 5) Session ID in URL Rewrite
 Severidad: Alta
 
 Descripcion: La sesion del usuario aparece en la URL, exponiendo el identificador de sesion
@@ -90,7 +90,7 @@ Recomendacion:
 - Almacenar sesiones unicamente en cookies seguras
 - Usar flags "httponly", "Secure", "SameSite"
 
-6) Vulnerabilidad javascript en libreria
+## 6) Vulnerabilidad javascript en libreria
 Severidad: Media
 
 Descripcion: Se encontraron versiones antiguas o vulnerables de librerias JS
@@ -103,7 +103,7 @@ Recomendacion:
 - Actualizar librerias a sus ultimas versiones
 - Implementar auditoria continua de dependencias
 
-7) Cross-Domain JavaScript source file inclusion
+## 7) Cross-Domain JavaScript source file inclusion
 Severidad: Media
 
 Descripcion: Se cargan archivos JS desde dominios no controlados.
@@ -116,7 +116,7 @@ Recomendacion:
 - Servir scripts desde el dominio propio
 - Utilizar Subresource Integrity (SRI)
 
-8) Private IP Disclosure
+## 8) Private IP Disclosure
 Severidad: baja
 
 Descripcion: La aplicacion expone direcciones IP privadas en mensajes o respuestas
@@ -129,7 +129,7 @@ Recomendacion:
 - Sanitizar mensajes de error
 - Evitar exponer informacion de infraestructura
 
-9) Server Version Disclosure (Server Header)
+## 9) Server Version Disclosure (Server Header)
 
 Severidad: Baja
 
@@ -141,7 +141,7 @@ Impacto:
 Recomendacion:
 - Ocultar informacion del servidor. Ejemplo: (Nginx)
 
-10) Strict-Transport-Security Header Not Set (HSTS)
+## 10) Strict-Transport-Security Header Not Set (HSTS)
 
 Severidad: Alta
 
@@ -154,7 +154,7 @@ Impacto:
 Recomendacion:
 - Agregar: "Strict-Transport-Security: max-age=31536000"; includeSubDomains; preload
 
-11) Timestamp Disclosure - Unix
+## 11) Timestamp Disclosure - Unix
 
 Severidad: baja
 
@@ -168,7 +168,7 @@ Recomendacion:
 - Evitar mostrar timestamps inncesarios
 - Usar formatos de fecha amigables para el usuario
 
-12) X-Content-Type-Options Header Missing
+## 12) X-Content-Type-Options Header Missing
 severidad: Media
 
 Descripcion: Falta el header que indica al navegador no interpretar archivos como otro tipo MIME [Man in the Middle]
@@ -179,7 +179,7 @@ Impacto:
 Recomendacion:
 - Agregar: "X-content-Type-options: nosniff"
 
-CONCLUSION:
+## CONCLUSION:
 El análisis DAST reveló un conjunto significativo de vulnerabilidades relacionadas con configuraciones inseguras, manejo incorrecto de sesiones, exposición de información sensible y falta de controles en el navegador.  
 La aplicación OWASP Juice Shop está diseñada para ser vulnerable, por lo que estos hallazgos eran esperables; sin embargo, este ejercicio demuestra capacidad para:
 
