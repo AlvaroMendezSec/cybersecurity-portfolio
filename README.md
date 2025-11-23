@@ -5,17 +5,17 @@ Portafolio de ciberseguridad
 
 Este portafolio contiene mis proyectos prácticos relacionados con:
 - Pentesting
-- Análisis de vulnerabilidades
+- Análisis de vulnerabilidades DAST y SAST
 - Seguridad en aplicaciones web
 - Auditorías básicas
 - Automatización de tareas de seguridad
 
-Mi objetivo actual es desarrollarme como Consultor/Pentester Junior.
+Mi objetivo actual es desarrollarme como AppSecurity Analyst Junior.
 
 ## Proyectos
 1. **Análisis de vulnerabilidades DAST y SAST Web App PHP (Local)**
    - OWASP Top 10
-   - Uso de OWASP ZAP
+   - Uso de OWASP ZAP y Semgrep
    - Identificación y documentación de fallos y vulnerabilidades
 
 2. **SQL Injection básico en entorno controlado**
