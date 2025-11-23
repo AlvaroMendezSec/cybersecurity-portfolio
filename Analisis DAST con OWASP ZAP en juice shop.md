@@ -14,13 +14,13 @@ OWASP Juice Shop en entorno local
 OWASP ZAP (versión 2.16.1)
 
 Kali linux
-
+--- 
 Durante la evaluación dinámica del entorno OWASP Juice Shop utilizando OWASP ZAP, se identificaron múltiples vulnerabilidades que afectan la seguridad, integridad y privacidad de la aplicación. 
 Estas fallas abarcan desde problemas de configuración, exposición innecesaria de información y uso de librerías vulnerables, hasta debilidades que pueden permitir ataques más serios como SQL Injection o Clickjacking.
 
 El objetivo de este reporte es presentar cada hallazgo, su impacto potencial y recomendaciones específicas de mitigación siguiendo buenas prácticas de seguridad, estándares OWASP y configuraciones seguras modernas.
 
-# Vulnerabilidades encontradas
+# Vulnerabilidades detalladas
 
 ## 1)SQL injection
 
@@ -39,7 +39,7 @@ Recomendaciones:
 - Implementar validaciones estrictas del lado del servidor
 - Minimizar privilegios del usuario o base de datos
 
-## 2) Content security Policy (CSP) Header not set
+## 2) Content Security Policy (CSP) Header not set
 
 Severidad: Alta
 
@@ -50,7 +50,7 @@ Impacto:
 - Permite carga de scripts maliciosos externos
 
 Recomendación: Implementar CSP mínimo como:
-content-Security-Policy: Default-src 'self';
+Content-Security-Policy: Default-src 'self';
 
 ## 3) Cross-Domain missconfiguration (CORS)
 
