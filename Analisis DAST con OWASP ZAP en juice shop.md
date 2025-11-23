@@ -67,7 +67,8 @@ Impacto:
 - Amplifica el daño de un ataque Cross Site Scripting (XSS)
 - Permite carga de scripts maliciosos externos
 
-Recomendación: Implementar CSP mínimo como:
+Recomendación: 
+- Implementar CSP mínimo como:
 
 Content-Security-Policy: default-src 'self';
 
