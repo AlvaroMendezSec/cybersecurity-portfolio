@@ -1,4 +1,4 @@
-# Descripcion del laboratorio:
+# Descripción del laboratorio:
 
 OWASP Juice shop es un sitio web vulnerable creado para aprender a detectar vulnerabilidades web comunes
 
@@ -44,16 +44,16 @@ El objetivo de este reporte es presentar cada hallazgo, su impacto potencial y r
 
 Severidad: Alta
 
-Descripcion: Se detectó que ciertos puntos de entrada permiten la inyeccion de codigo sql, lo podria manipular las consultas ejecutadas por la aplicacion
+Descripción: Se detectó que ciertos puntos de entrada permiten la inyeccion de codigo sql, lo podria manipular las consultas ejecutadas por la aplicacion
 
 Impacto: 
 - Acceso no autorizado a datos sensibles
-- Manipulacion o borrado de informacion
-- Posible escalacion a comprometer la base de datos completa
+- Manipulación o borrado de información
+- Posible escalación a comprometer la base de datos completa
 
 Recomendaciones:
 - Utilizar consultas preparadas/parametrizadas
-- Evitar concatenacion de entradas del usuario
+- Evitar concatenación de entradas del usuario
 - Implementar validaciones estrictas del lado del servidor
 - Minimizar privilegios del usuario o base de datos
 
@@ -61,14 +61,14 @@ Recomendaciones:
 
 Severidad: Alta
 
-Descripción: La aplicacion no define una politica de seguridad de contenido (CSP), dejando el navegador sin restricciones sobre que fuentes externas puede cargar.
+Descripción: La aplicacion no define una política de seguridad de contenido (CSP), dejando el navegador sin restricciones sobre que fuentes externas puede cargar.
 
 Impacto:
 - Amplifica el daño de un ataque Cross Site Scripting (XSS)
 - Permite carga de scripts maliciosos externos
 
 Recomendación: Implementar CSP mínimo como:
-Content-Security-Policy: Default-src 'self';
+Content-Security-Policy: default-src 'self';
 
 ## 3) Cross-Domain missconfiguration (CORS)
 
