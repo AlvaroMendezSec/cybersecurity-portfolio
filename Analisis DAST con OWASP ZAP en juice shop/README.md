@@ -57,6 +57,8 @@ Recomendaciones:
 - Implementar validaciones estrictas del lado del servidor
 - Minimizar privilegios del usuario o base de datos
 
+![evidencia sql injection](./Evidencias/SQL_injection.png)
+
 ## 2) Content Security Policy (CSP) Header not set
 
 Severidad: Alta
