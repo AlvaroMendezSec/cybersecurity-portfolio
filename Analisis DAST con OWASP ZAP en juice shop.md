@@ -68,6 +68,7 @@ Impacto:
 - Permite carga de scripts maliciosos externos
 
 Recomendación: Implementar CSP mínimo como:
+
 Content-Security-Policy: default-src 'self';
 
 ## 3) Cross-Domain missconfiguration (CORS)
