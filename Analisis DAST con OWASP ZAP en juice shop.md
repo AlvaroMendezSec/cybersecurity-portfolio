@@ -113,7 +113,7 @@ Recomendacion:
 ## 6) Vulnerabilidad javascript en libreria
 Severidad: Media
 
-Descripcion: Se encontraron versiones antiguas o vulnerables de librerias JS
+Descripcion: Se encontraron versiones antiguas o vulnerables de librerias JavaScript [CVE-2020-11023 y CVE-2020-11022]
 
 Impacto:
 - Posible ejecucion de codigo malicioso
