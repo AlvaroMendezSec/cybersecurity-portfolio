@@ -73,7 +73,8 @@ Recomendación:
 - Implementar CSP mínimo como:
 
 Content-Security-Policy: default-src 'self';
-![evidencia sql injection](./Evidencias/CSP Header not set.png)
+
+![evidencia CSP](./Evidencias/CSP Header not set.png)
 
 ## 3) Cross-Domain missconfiguration (CORS)
 
