@@ -6,7 +6,7 @@ Portafolio de ciberseguridad
 Este portafolio contiene mis proyectos prácticos relacionados con:
 - Pentesting
 - Análisis de vulnerabilidades DAST y SAST
-- Seguridad en aplicaciones web
+- Seguridad en aplicaciones web/APIs
 - Auditorías básicas
 - Automatización de tareas de seguridad
 
