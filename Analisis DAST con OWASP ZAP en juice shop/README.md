@@ -112,7 +112,7 @@ Impacto:
 - Robo facil de sesion via logs, historial o referer
 - Secuestro de sesion
 
-![evidencia CSP](./Evidencias/.png)
+![evidencia CSP](./Evidencias/Session_ID.png)
 
 Recomendacion:
 - Almacenar sesiones unicamente en cookies seguras
@@ -181,6 +181,8 @@ Impacto:
 
 Recomendacion:
 - Agregar: "Strict-Transport-Security: max-age=31536000"; includeSubDomains; preload
+
+![evidencia CSP](./Evidencias/HSTS_NOT_SET.png)
 
 ## 11) Timestamp Disclosure - Unix
 
