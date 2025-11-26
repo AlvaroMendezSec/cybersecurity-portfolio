@@ -74,7 +74,7 @@ Recomendación:
 
 Content-Security-Policy: default-src 'self';
 
-![evidencia CSP](./Evidencias/CSP Header not set.png)
+![evidencia CSP](./Evidencias/CSP_Header_not_set.png)
 
 ## 3) Cross-Domain missconfiguration (CORS)
 
@@ -89,6 +89,8 @@ Impacto:
 Recomendacion:
 - Restringir CORS a dominios especificos
 - Evitar [Acces-Control-Allow-Origin:] * Cuando se usan cookies o tokens
+
+![evidencia CSP](./Evidencias/CORS.png)
 
 ## 4) Missing Anti-clickjacking Header
 
@@ -109,6 +111,8 @@ Descripcion: La sesion del usuario aparece en la URL, exponiendo el identificado
 Impacto:
 - Robo facil de sesion via logs, historial o referer
 - Secuestro de sesion
+
+![evidencia CSP](./Evidencias/.png)
 
 Recomendacion:
 - Almacenar sesiones unicamente en cookies seguras
