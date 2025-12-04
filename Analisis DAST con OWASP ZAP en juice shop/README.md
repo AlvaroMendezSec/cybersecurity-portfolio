@@ -57,6 +57,8 @@ Recomendaciones:
 - Implementar validaciones estrictas del lado del servidor
 - Minimizar privilegios del usuario o base de datos
 
+CWE asociado: CWE-89
+
 ![evidencia sql injection](./Evidencias/SQL_injection.png)
 
 ## 2) Content Security Policy (CSP) Header not set
@@ -74,6 +76,8 @@ Recomendación:
 
 Content-Security-Policy: default-src 'self';
 
+CWE asociado: CWE-693 
+
 ![evidencia CSP](./Evidencias/CSP_Header_not_set.png)
 
 ## 3) Cross-Domain missconfiguration (CORS)
@@ -89,6 +93,8 @@ Impacto:
 Recomendacion:
 - Restringir CORS a dominios especificos
 - Evitar [Acces-Control-Allow-Origin:] * Cuando se usan cookies o tokens
+
+CWE asociado: CWE-89 (sql injection)
 
 ![evidencia CSP](./Evidencias/CORS.png)
 
