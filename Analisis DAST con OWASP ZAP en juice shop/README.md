@@ -94,7 +94,7 @@ Recomendacion:
 - Restringir CORS a dominios especificos
 - Evitar [Acces-Control-Allow-Origin:] * Cuando se usan cookies o tokens
 
-CWE asociado: CWE-89 (sql injection)
+CWE asociado: CWE-264
 
 ![evidencia CSP](./Evidencias/CORS.png)
 
@@ -105,6 +105,8 @@ Severidad: Media
 Descripcion: La aplicacion no previene ser incrustada en iframes por sitios externos
 
 Impacto: Riesgo de ataques de clickjacking
+
+CWE asociado: CWE-1021
 
 Recomendacion:
 Agregar: "X-FRAME-Options: DENY" o "Content-Security-Policy: frame-ancestors 'none';"
@@ -117,6 +119,8 @@ Descripcion: La sesion del usuario aparece en la URL, exponiendo el identificado
 Impacto:
 - Robo facil de sesion via logs, historial o referer
 - Secuestro de sesion
+
+CWE asociado: CWE-598
 
 ![evidencia Session_ID](./Evidencias/Session_ID.png)
 
@@ -137,6 +141,8 @@ Recomendacion:
 - Actualizar librerias a sus ultimas versiones
 - Implementar auditoria continua de dependencias
 
+CWE asociado: CWE-1395
+
 ## 7) Cross-Domain JavaScript source file inclusion
 Severidad: Media
 
@@ -149,6 +155,8 @@ Impacto:
 Recomendacion:
 - Servir scripts desde el dominio propio
 - Utilizar Subresource Integrity (SRI)
+
+CWE asociado: CWE-829
 
 ## 8) Private IP Disclosure
 Severidad: baja
@@ -163,6 +171,8 @@ Recomendacion:
 - Sanitizar mensajes de error
 - Evitar exponer informacion de infraestructura
 
+CWE asociado: CWE-497
+
 ## 9) Server Version Disclosure (Server Header)
 
 Severidad: Baja
@@ -174,6 +184,8 @@ Impacto:
 
 Recomendacion:
 - Ocultar informacion del servidor. Ejemplo: (Nginx)
+
+CWE asociado: CWE-497
 
 ## 10) Strict-Transport-Security Header Not Set (HSTS)
 
@@ -187,6 +199,8 @@ Impacto:
 
 Recomendacion:
 - Agregar: "Strict-Transport-Security: max-age=31536000"; includeSubDomains; preload
+
+CWE asociado: CWE-319
 
 ![evidencia HSTS](./Evidencias/HSTS_NOT_SET.png)
 
@@ -204,6 +218,8 @@ Recomendacion:
 - Evitar mostrar timestamps inncesarios
 - Usar formatos de fecha amigables para el usuario
 
+CWE asociado: CWE-497
+
 ## 12) X-Content-Type-Options Header Missing
 severidad: Media
 
@@ -214,6 +230,8 @@ Impacto:
 
 Recomendacion:
 - Agregar: "X-content-Type-options: nosniff"
+
+CWE asociado: CWE-693
 
 ## CONCLUSION:
 El análisis DAST reveló un conjunto significativo de vulnerabilidades relacionadas con configuraciones inseguras, manejo incorrecto de sesiones, exposición de información sensible y falta de controles en el navegador.  
