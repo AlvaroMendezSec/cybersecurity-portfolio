@@ -27,7 +27,7 @@ El objetivo de este reporte es presentar cada hallazgo, su impacto potencial y r
 | 1  | SQL Injection                                   | 🔴 Alta   |
 | 2  | Content-Security-Policy Header Not Set          | 🔴 Alta   |
 | 3  | Cross-Domain Misconfiguration (CORS)            | 🔴 Alta   |
-| 4  | Missing Anti-clickjacking Header                | 🟡 Media  |
+| 4  | Missing Anti-clickjacking Header                | 🟢 baja   |
 | 5  | Session ID in URL Rewrite                       | 🔴 Alta   |
 | 6  | Vulnerable JavaScript Library                   | 🟡 Media  |
 | 7  | Cross-Domain JavaScript Source File Inclusion   | 🟡 Media  |
@@ -100,16 +100,17 @@ CWE asociado: CWE-264
 
 ## 4) Missing Anti-clickjacking Header
 
-Severidad: Media
+Severidad: baja
 
-Descripcion: La aplicacion no previene ser incrustada en iframes por sitios externos
+Descripcion: OWASP ZAP detectó la ausencia del encabezado X-Frame-Options en varios endpoints pertenecientes al módulo Socket.IO usados para comunicación en tiempo real.
 
-Impacto: Riesgo de ataques de clickjacking
+Analisis: 
+Los endpoints de Socket.IO no devuelven contenido HTML renderizable en un navegador. Por lo tanto, no pueden ser embebidos en un iframe, y la ausencia de X-Frame-Options no constituye un riesgo de clickjacking.
 
 CWE asociado: CWE-1021
 
 Recomendacion:
-Agregar: "X-FRAME-Options: DENY" o "Content-Security-Policy: frame-ancestors 'none';"
+Aunque no es necesario para estos endpoints, se recomienda configurar X-Frame-Options: DENY globalmente en la aplicación para reducir ruido en escaneos futuros.
 
 ## 5) Session ID in URL Rewrite
 Severidad: Alta
