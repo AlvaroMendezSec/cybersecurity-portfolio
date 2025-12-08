@@ -238,7 +238,7 @@ CWE asociado: CWE-693
 
 ## 1) Improper Input validation
 
-Severidad: Media-Alta
+Severidad: Baja-media
 
 Descripcion:
 
