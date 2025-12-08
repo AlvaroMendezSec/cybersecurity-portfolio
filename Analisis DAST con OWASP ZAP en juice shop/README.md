@@ -238,16 +238,22 @@ CWE asociado: CWE-693
 
 ## 1) Improper Input validation
 
+Severidad: Media-Alta
+
 Descripcion:
+
 La aplicación permite modificar el valor del campo rating enviando peticiones manualmente alteradas desde un proxy. El servidor no valida que la calificación esté dentro del rango esperado (1–5 estrellas).
 Debido a esta falta de validación, un usuario puede enviar valores arbitrarios como 0, -1 o 100, lo cual altera la lógica de negocio del sistema.
 Esto corresponde a una vulnerabilidad de Parameter Tampering, asociada a Improper Input Validation (CWE-20) y, dependiendo del impacto final, puede considerarse parte de Broken Access Control (A01:2021) porque permite realizar acciones no previstas por el sistema.
 
 Recomendacion:
+
 Implementar validación estricta del lado del servidor para el parámetro rating, limitando los valores permitidos al rango de 1 a 5. Actualmente, el servidor procesa valores arbitrarios enviados por el cliente, lo cual permite manipulación de parámetros y altera la lógica de negocio.
 Además, se recomienda definir los parámetros aceptados utilizando un esquema de validación (Joi/Express-Validator/Yup) y documentarlos en OpenAPI para asegurar consistencia y prevenir valores inesperados.
 
 CWE asociado: CWE-20
+
+![evidencia ImproperInputValidation](./Evidencias/Improper_input_val.png)
 
 ## CONCLUSION:
 El análisis DAST reveló un conjunto significativo de vulnerabilidades relacionadas con configuraciones inseguras, manejo incorrecto de sesiones, exposición de información sensible y falta de controles en el navegador.  
