@@ -5,7 +5,6 @@ Este proyecto documenta un **análisis de seguridad estática (SAST)** realizado
 
 El objetivo es **identificar, comprender y documentar vulnerabilidades comunes de aplicaciones web**, desde la perspectiva de un **Application Security Analyst Junior**, enfocándose no solo en la detección automática, sino también en el **análisis y entendimiento de cada hallazgo**.
 
----
 
 ## Objetivos
 - Practicar **SAST (Static Application Security Testing)** en una aplicación vulnerable real.
@@ -14,7 +13,6 @@ El objetivo es **identificar, comprender y documentar vulnerabilidades comunes d
 - Desarrollar habilidades de **documentación técnica**.
 - Comprender cómo estas vulnerabilidades se relacionan con **OWASP Top 10**.
 
----
 
 ## Herramientas utilizadas
 - **DVWA (Damn Vulnerable Web Application)** – Aplicación vulnerable para pruebas
