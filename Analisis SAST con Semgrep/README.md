@@ -20,3 +20,13 @@ El objetivo es **identificar, comprender y documentar vulnerabilidades comunes d
 - **Reglas predefinidas de Semgrep (Security Rules)**
 - **PHP** – Lenguaje principal analizado
 - **Linux / Kali Linux**
+
+## Analisis de vulnerabilidades detectadas (OWASP top 10s)
+
+### Injection (SQL, command, XSS, File)
+
+
+### Criptographic Failures
+
+
+
