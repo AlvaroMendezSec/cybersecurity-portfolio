@@ -4,7 +4,6 @@ Portafolio de ciberseguridad
 # Portafolio de Ciberseguridad – Alvaro Méndez
 
 Este portafolio contiene mis proyectos prácticos relacionados con:
-- Pentesting
 - Análisis de vulnerabilidades DAST y SAST
 - Seguridad en aplicaciones web/APIs
 - Auditorías básicas
@@ -15,7 +14,7 @@ Mi objetivo actual es desarrollarme como AppSecurity Analyst Junior.
 ## Proyectos
 1. **Análisis de vulnerabilidades DAST y SAST Web App PHP (Local)**
    - OWASP Top 10
-   - Uso de OWASP ZAP, Nikto y Semgrep
+   - Uso de OWASP ZAP, Nikto, sqlmap y Semgrep
    - Identificación y documentación de fallos y vulnerabilidades
 
 2. **SQL Injection básico en entorno controlado**
