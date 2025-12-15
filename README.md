@@ -15,7 +15,7 @@ Mi objetivo actual es desarrollarme como AppSecurity Analyst Junior.
 ## Proyectos
 1. **Análisis de vulnerabilidades DAST y SAST Web App PHP (Local)**
    - OWASP Top 10
-   - Uso de OWASP ZAP y Semgrep
+   - Uso de OWASP ZAP, Nikto y Semgrep
    - Identificación y documentación de fallos y vulnerabilidades
 
 2. **SQL Injection básico en entorno controlado**
@@ -26,7 +26,7 @@ Mi objetivo actual es desarrollarme como AppSecurity Analyst Junior.
    - PHP + Composer
    - Reportes de CVEs y sugerencias de mitigación
 
-4. **Pentesting básico – DVWA o OWASP Juice Shop**
+4. **Pentesting básico – Webgoat y OWASP Juice Shop**
    - Ataques controlados
    - Reportes con metodología PTES
 
