@@ -25,8 +25,64 @@ El objetivo es **identificar, comprender y documentar vulnerabilidades comunes d
 
 ### Injection (SQL, command, XSS, File)
 
+#### SQL injection 
+
+Descripcion:
+
+Codigo vulnerable:
+
+Riesgo:
+
+Impacto:
+
+Recomendaciones:
 
 ### Criptographic Failures
 
+Descripcion:
+
+Codigo vulnerable:
+
+Riesgo:
+
+Impacto:
+
+Recomendaciones:
+
+### XSS
+
+Descripcion:
+
+Codigo vulnerable:
+
+Riesgo:
+
+Impacto:
+
+Recomendaciones:
+
+### Security Missconfigurations
+
+Descripcion:
+
+Codigo vulnerable:
+
+Riesgo:
+
+Impacto:
+
+Recomendaciones:
+
+### **Headers & Hardening**
+
+Descripcion:
+
+Codigo vulnerable:
+
+Riesgo:
+
+Impacto:
+
+Recomendaciones:
 
 
