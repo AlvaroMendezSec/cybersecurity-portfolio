@@ -19,7 +19,7 @@ El objetivo es **identificar, comprender y documentar vulnerabilidades comunes d
 - **Semgrep** – Herramienta de análisis estático de código
 - **Reglas predefinidas de Semgrep (Security Rules)**
 - **PHP** – Lenguaje principal analizado
-- **Linux / Kali Linux**
+- **Kali Linux**
 
 ## Analisis de vulnerabilidades detectadas (OWASP top 10s)
 
