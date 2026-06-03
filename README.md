@@ -9,7 +9,7 @@ Este portafolio contiene mis proyectos prácticos relacionados con:
 - Auditorías básicas
 - Monitoreo de seguridad con SIEM (Wazuh)
 
-Mi objetivo actual es desarrollarme como AppSecurity Analyst Junior.
+Mi objetivo es desarrollame principalmente como SOC Analyst 
 
 ## Proyectos
 1. **Análisis de vulnerabilidades DAST y SAST Web App PHP (Local)**
