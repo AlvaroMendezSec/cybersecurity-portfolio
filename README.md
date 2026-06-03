@@ -7,7 +7,7 @@ Este portafolio contiene mis proyectos prácticos relacionados con:
 - Análisis de vulnerabilidades DAST y SAST
 - Seguridad en aplicaciones web/APIs
 - Auditorías básicas
-- Automatización de tareas de seguridad
+- Monitoreo de seguridad con SIEM (Wazuh)
 
 Mi objetivo actual es desarrollarme como AppSecurity Analyst Junior.
 
@@ -28,6 +28,11 @@ Mi objetivo actual es desarrollarme como AppSecurity Analyst Junior.
 4. **Pentesting básico – Webgoat y OWASP Juice Shop**
    - Ataques controlados
    - Reportes con metodología PTES
+
+4. **Laboratorio SIEM con Wazuh**
+   - Monitoreo de endpoints
+   - Reportes de incidentes
+   - Triage basico
 
 ## 📬 Contacto
 - LinkedIn: https://www.linkedin.com/in/alvaro-mendez-mesen-a55526258/
