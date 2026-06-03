@@ -12,7 +12,7 @@ El objetivo principal de este proyecto es adquirir experiencia real en las tarea
 | Componente / Rol | Sistema Operativo | Función Técnica |
 | :--- | :--- | :--- | :--- |
 | **Wazuh Manager** | Ubuntu Server 22.04 LTS  | Servidor central. Recolecta, parsea y correlaciona los logs recibidos a través de reglas de seguridad. |
-| **Domain Controller** | Windows Server 2022  | Controlador de Dominio (KDC Kerberos / Active Directory). Gestión de identidades. |
+| **Domain Controller** | Windows Server 2025  | Controlador de Dominio (KDC Kerberos / Active Directory). Gestión de identidades. |
 | **Endpoint Víctima** | Windows 11 Enterprise | Estación de trabajo unida al dominio bajo monitoreo continuo del agente de Wazuh. |
 
 ---
