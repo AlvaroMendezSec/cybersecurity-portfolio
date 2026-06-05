@@ -31,7 +31,7 @@ Caso de Estudio: [Escaneo de puertos no autorizado]
 
 Resumen 
 
-Se realizó un escaneo de puertos utilizando Nmap contra un servidor Windows Server 2025 monitoreado por Wazuh. El objetivo fue analizar la capacidad de detección del SIEM y evaluar qué evidencia quedó registrada en los logs del sistema.
+Se detectó y registró una actividad de reconocimiento táctico inicial (escaneo activo de puertos) dirigida contra el Controlador de Dominio de la infraestructura (WIN-L1E9NH3SQQA). El ataque fue ejecutado de forma automatizada mediante ráfagas de conexiones TCP en un intervalo de tiempo extremadamente reducido (milisegundos), con el fin de identificar servicios expuestos y mapear la superficie de ataque interna.
 
 Objetivos
 - Generar actividad sospechosa controlada.
@@ -39,41 +39,44 @@ Objetivos
 - Identificar eventos relevantes.
 - Documentar el proceso de investigación.
 
-### Descripción del Ataque
-
-Desde la máquina Kali Linux se ejecutó un escaneo TCP contra el servidor Windows para identificar puertos abiertos.
 
 Responder:
 ### Evidencia:
 
 ![evidencia_log_wazuh](./Evidencias/wazuh_logs.png)
 
-¿Qué ocurrió?
-¿Qué evidencia lo demuestra?
-¿Qué información proporcionan los logs?
-¿Qué limitaciones encontré?
+La evidencia forense contundente se encuentra centralizada en el SIEM Wazuh mediante la indexación masiva del Event ID 5152 (Filtering Platform Packet Drop) correlacionado con la dirección IP de origen del atacante. El Visor de Eventos local de Windows Server respaldó la anomalía antes de su ingesta en el SIEM.
+
 MITRE ATT&CK
-Técnica	Nombre
-T1595	Active Scanning
 
-Explicar brevemente por qué aplica.
+- TTP: T1595	Active Scanning
 
-Hallazgos
-Eventos relevantes encontrados.
-Información obtenida por el atacante.
-Visibilidad proporcionada por Wazuh.
-Recomendaciones
-Mejoras de monitoreo.
-Reglas adicionales.
-Configuraciones recomendadas.
+### ¿Qué ocurrió?
+
+Se detectó un intento de reconocimiento de red (Network Scanning) dirigido hacia el Controlador de Dominio de la infraestructura. Un host no autorizado en el segmento de red (192.168.139.132) realizó un barrido de puertos TCP para identificar servicios expuestos y posibles vectores de entrada.
+
+### Evidencia que lo demuestra
+
+La evidencia principal es la ráfaga de eventos Event ID 5152 generados por la Plataforma de Filtrado de Windows (WFP). Los registros muestran múltiples intentos de conexión hacia puertos sensibles (como el 53 - DNS) y puertos aleatorios en un intervalo de tiempo de milisegundos, todos originados desde la misma dirección IP externa.
+
+### Informacion proporcionada por los logs
+Los logs de Wazuh (alimentados por el canal de Seguridad de Windows) proporcionan:
+
+Origen del Ataque: IP 192.168.139.132 (Kali Linux).
+
+Víctima: Host WIN-L1E9NH3SQQA (Windows Server).
+
+Vector Técnico: Uso de paquetes de tipo Stealth (probablemente un escaneo SYN de Nmap).
+
+Acción del Firewall: Bloqueo y descarte automático de paquetes (Packet Drop).
+
+## Información obtenida por el atacante
+
+Debido a que el Firewall de Windows estaba en modo "Drop" (Descarte), el atacante recibió respuestas de tipo Filtered. Esto significa que el atacante probablemente no pudo confirmar qué servicios estaban abiertos, pero sí confirmó que el host estaba encendido y protegido por un firewall activo.
 
 ### Lecciones Aprendidas
 
-Esta es una sección que muchos olvidan y que suele llamar mucho la atención.
-
-Ejemplo:
-
-"Durante la investigación se descubrió que el Event ID 5152 estaba filtrado por la configuración del agente Wazuh, lo que impedía su visualización en el SIEM. Fue necesario revisar el archivo ossec.conf para analizar el comportamiento observado."
+Durante la investigación se descubrió que el Event ID 5152 estaba filtrado por la configuración del agente Wazuh (con el objetivo de disminuir el volumen de logs), lo que impedía su visualización en el SIEM. Fue necesario revisar el archivo ossec.conf para analizar el comportamiento observado.
 
 Conclusión
 
