@@ -31,58 +31,17 @@ Caso de Estudio: [Escaneo de puertos no autorizado]
 
 Resumen 
 
-Wazuh recolectó logs de un posible escaneo de puertos no autorizado
-
-Qué ocurrió.
-Cómo fue detectado.
-Cuál era el objetivo del análisis.
-
-Ejemplo:
-
-"Se realizó un escaneo de puertos utilizando Nmap contra un servidor Windows Server 2025 monitoreado por Wazuh. El objetivo fue analizar la capacidad de detección del SIEM y evaluar qué evidencia quedó registrada en los logs del sistema."
+Se realizó un escaneo de puertos utilizando Nmap contra un servidor Windows Server 2025 monitoreado por Wazuh. El objetivo fue analizar la capacidad de detección del SIEM y evaluar qué evidencia quedó registrada en los logs del sistema.
 
 Objetivos
-Generar actividad sospechosa controlada.
-Analizar la telemetría recolectada por Wazuh.
-Identificar eventos relevantes.
-Documentar el proceso de investigación.
-Entorno de Laboratorio
-Infraestructura
-Equipo	Sistema Operativo	Función
-Kali Linux	Kali Linux	Máquina atacante
-Windows Server	Windows Server 2022	Objetivo
-Ubuntu Server	Ubuntu Server	Wazuh Manager
-Herramientas Utilizadas
-Wazuh
-Nmap
-Windows Event Viewer
-PowerShell
-Sysmon (si aplica)
-Descripción del Ataque
+- Generar actividad sospechosa controlada.
+- Analizar la telemetría recolectada por Wazuh.
+- Identificar eventos relevantes.
+- Documentar el proceso de investigación.
 
-Explicar qué se hizo exactamente.
+### Descripción del Ataque
 
-Ejemplo:
-
-"Desde la máquina Kali Linux se ejecutó un escaneo TCP contra el servidor Windows para identificar puertos abiertos."
-
-Evidencia Recopilada
-Evidencia en Windows
-Event ID observados.
-Capturas relevantes.
-Logs encontrados.
-Evidencia en Wazuh
-Alertas generadas.
-Eventos observados.
-Capturas del dashboard.
-Investigación
-Línea Temporal
-Hora	Evento
-10:00	Inicio del escaneo
-10:01	Windows registra eventos
-10:02	Wazuh recibe los eventos
-10:03	Se genera alerta
-Análisis
+Desde la máquina Kali Linux se ejecutó un escaneo TCP contra el servidor Windows para identificar puertos abiertos.
 
 Responder:
 
@@ -104,7 +63,8 @@ Recomendaciones
 Mejoras de monitoreo.
 Reglas adicionales.
 Configuraciones recomendadas.
-Lecciones Aprendidas
+
+### Lecciones Aprendidas
 
 Esta es una sección que muchos olvidan y que suele llamar mucho la atención.
 
