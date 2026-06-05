@@ -44,6 +44,9 @@ Objetivos
 Desde la máquina Kali Linux se ejecutó un escaneo TCP contra el servidor Windows para identificar puertos abiertos.
 
 Responder:
+### Evidencia:
+
+![evidencia_log_wazuh](./Evidencias/wazuh_logs.png)
 
 ¿Qué ocurrió?
 ¿Qué evidencia lo demuestra?
