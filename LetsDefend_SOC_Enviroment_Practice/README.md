@@ -26,7 +26,7 @@ Authentication Logs
 ## Investigation of VPN authentication logs revealed:
 
 - Multiple authentication attempts originating from the same source IP address.
-- Attempts were made by trying multiple usernames until one of them was a correct username
+- Attempts were made by trying multiple usernames (user enumeration) until one of them match as a valid username
 - Initial failures returned the message: "Username does not exist"
 - Later attempts returned: "Username is correct but password is wrong"
 - Then account mane@letsdefend.io experienced highest number of login attempts.
@@ -34,6 +34,11 @@ Authentication Logs
 - Threat Intelligence Investigation:
   - Source IP 37.19.221.229 was investigated using available threat intelligence resources.
   - No known malicious reputation was identified.
+ 
+### MITRE-ATT&CK:
+
+  - T1110 - Brute Force
+  - T1110.003 - Password Sprying
 
 ### Endpoint Investigation
 
