@@ -61,19 +61,19 @@ The investigation identified behavior consistent with password spraying or brute
 
 ### Supporting evidence:
 
-Trying different usernames and targeted from a single IP address.
-Username "mane@letsdefend.io" was correct.
-Repeated password failures against mane@letsdefend.io
-Successful authentication after multiple password failed attempts.
+- Trying different usernames and targeted from a single IP address.
+- Username "mane@letsdefend.io" was correct.
+- Repeated password failures against mane@letsdefend.io
+- Successful authentication after multiple password failed attempts.
 
 Although no malicious post-authentication activity was identified, the authentication pattern matched the detection logic of the brute-force alert and represented a legitimate security concern.
 
 ### Recommendation
-Reset loggin credentials of the affected account.
-Review recent activity associated with the account.
-Enable Multi-Factor Authentication (MFA) if not already implemented.
-Monitor for additional authentication attempts from the source IP address.
-Review VPN access logs for similar activity targeting other users.
+- Reset loggin credentials of the affected account.
+- Review recent activity associated with the account.
+- Enable Multi-Factor Authentication (MFA) if not already implemented.
+-Monitor for additional authentication attempts from the source IP address.
+- Review VPN access logs for similar activity targeting other users.
 
 ### Escalated for further review.
 
