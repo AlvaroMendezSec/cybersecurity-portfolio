@@ -50,13 +50,13 @@ Endpoint activity associated with the user account was reviewed.
 - Targeted User Account: mane@letsdefend.io
 - Timeline:
 Time	Event
-01:43 PM	Multiple VPN login attempts begin from source IP 37.19.221.229
-01:45 PM - 01:43 PM	Authentication failures observed against trying multiple user accounts
-01:47 - 01:50PM	Attempts transition from invalid usernames to valid username with incorrect passwords
-01:51 PM	Successful VPN authentication for mane@letsdefend.io
-Post 01:51 PM	No suspicious activity observed on the endpoint
-Classification
-True Positive
+- 01:43 PM	Multiple VPN login attempts begin from source IP 37.19.221.229
+- 01:45 PM - 01:43 PM	Authentication failures observed against trying multiple user accounts
+- 01:47 - 01:50PM	Attempts transition from invalid usernames to valid username with incorrect passwords
+- 01:51 PM	Successful VPN authentication for mane@letsdefend.io
+- Post 01:51 PM	No suspicious activity observed on the endpoint
+- Classification: True Positive
+
 
 The investigation identified behavior consistent with password spraying or brute-force activity.
 
