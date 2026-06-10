@@ -8,7 +8,7 @@ The goal of this Lab/Practice is to show my experience dealing with several comm
 - Phishing attempts
 - etc
 
-## Use case #1: Brute force attepmt (Hight severity alert)
+## Use case-001: Brute force attepmt (Hight severity alert)
 
 ### Incident Summary
 
