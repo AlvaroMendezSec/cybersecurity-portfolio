@@ -10,11 +10,11 @@ The goal of this Lab/Practice is to show my experience dealing with several comm
 
 ## Use case #1: Brute force attepmt (Hight severity alert)
 
-Incident Summary
+### Incident Summary
 
 A high-severity alert (SOC210 - Possible Brute Force Detected on VPN) was generated after multiple failed VPN authentication attempts were observed from a single source IP address, followed by a successful login. The alert indicated potential brute-force or password-spraying activity targeting VPN access.
 
-Evidence Analyzed
+### Evidence Analyzed
 Alert Information
 Alert Name: SOC210 - Possible Brute Force Detected on VPN
 Severity: High
@@ -23,7 +23,7 @@ Destination: VPN Gateway (vpn-letsdefend.io)
 Successful User Authentication: mane@letsdefend.io
 Authentication Logs
 
-Investigation of VPN authentication logs revealed:
+## Investigation of VPN authentication logs revealed:
 
 Multiple authentication attempts originating from the same source IP address.
 Attempts were made against five different user accounts.
@@ -40,7 +40,7 @@ Endpoint Investigation
 
 Endpoint activity associated with the user account was reviewed.
 
-Findings:
+### Findings:
 
 Previous legitimate activity was observed before the successful VPN login.
 No suspicious process execution or post-authentication activity was identified after the successful VPN login.
@@ -62,7 +62,7 @@ True Positive
 
 The investigation identified behavior consistent with password spraying or brute-force activity.
 
-Supporting evidence:
+### Supporting evidence:
 
 Multiple user accounts targeted from a single IP address.
 Enumeration of valid usernames.
@@ -71,15 +71,14 @@ Successful authentication after multiple failed attempts.
 
 Although no malicious post-authentication activity was identified, the authentication pattern matched the detection logic of the brute-force alert and represented a legitimate security concern.
 
-Recommendation
+### Recommendation
 Reset the password of the affected account.
 Review recent activity associated with the account.
 Enable Multi-Factor Authentication (MFA) if not already implemented.
 Monitor for additional authentication attempts from the source IP address.
 Review VPN access logs for similar activity targeting other users.
-Escalation Decision
 
-Escalated for further review.
+### Escalated for further review.
 
 Reason:
 A successful VPN authentication occurred after multiple failed login attempts against several user accounts. Additional review by a senior analyst is recommended to determine whether account compromise occurred and whether containment actions are necessary.
