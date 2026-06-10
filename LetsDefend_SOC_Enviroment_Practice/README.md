@@ -49,7 +49,6 @@ Endpoint activity associated with the user account was reviewed.
 
 - Targeted User Account: mane@letsdefend.io
 - Timeline:
-Time	Event
 - 01:43 PM	Multiple VPN login attempts begin from source IP 37.19.221.229
 - 01:45 PM - 01:43 PM	Authentication failures observed against trying multiple user accounts
 - 01:47 - 01:50PM	Attempts transition from invalid usernames to valid username with incorrect passwords
