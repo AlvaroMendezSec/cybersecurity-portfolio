@@ -186,13 +186,13 @@ whoami
 
 Local account creation detected:
 
-useradd -m analyst
-12:24:48 PM
+12:24:48 PM: useradd -m analyst
+
 
 Password assignment detected:
 
-passwd analyst
-12:24:55 PM
+- 12:24:55 PM: passwd analyst
+
 
 Directory enumeration activity detected:
 
