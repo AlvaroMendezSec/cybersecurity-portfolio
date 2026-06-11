@@ -157,7 +157,6 @@ These commands created a new local user account and assigned credentials.
 - XSL File	shell.xsl
 - Shell Script	shell.sh
 - User Indicators
-- Type	Value
 - Administrative Account	admin
 - Created Account	analyst
 - Timeline: 12:23:56 PM
