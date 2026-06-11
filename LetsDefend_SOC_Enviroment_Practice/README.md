@@ -263,3 +263,6 @@ The reverse shell payload attempted to establish outbound communications over TC
 ### Escalated to Incident Response Team
 
 The incident was escalated due to confirmed command execution and persistence establishment on a production server. Additional forensic investigation is required to determine the extent of compromise, identify potential lateral movement, and perform containment and eradication activities.
+
+## Use case-003: Ranwomware Detected (Critical severity alert)
+
