@@ -291,6 +291,8 @@ The file hash associated with the alert was analyzed using VirusTotal.
 - Avaddon
 - DelShad
 
+![Alert](./Evidence/Virus_total_analysis.png)
+
 **Conclusion**
 
 - The hash reputation provided strong evidence that the executable represented a legitimate malware threat rather than a false positive.
@@ -305,6 +307,8 @@ The following processes were observed after the ransomware execution:
 - vssadmin.exe
 - wbadmin.exe
 - bcdedit.exe
+
+![Alert](./Evidence/Events_captured.png)
 
 These utilities are frequently leveraged by ransomware operators to:
 
