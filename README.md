@@ -1,38 +1,28 @@
-# cybersecurity-portfolio
-Portafolio de ciberseguridad
+# Cybersecurity Portfolio – Alvaro Méndez
 
-# Portafolio de Ciberseguridad – Alvaro Méndez
+This portfolio contains my practical projects related to:
+- Security monitoring with SIEM (Wazuh)
+- Incident investigation using the LetsDefend blue team platform
 
-Este portafolio contiene mis proyectos prácticos relacionados con:
-- Análisis de vulnerabilidades DAST y SAST
-- Seguridad en aplicaciones web/APIs
-- Auditorías básicas
-- Monitoreo de seguridad con SIEM (Wazuh)
+My goal is to primarily develop my career as a SOC Analyst 
 
-Mi objetivo es desarrollame principalmente como SOC Analyst 
+## Projects
 
-## Proyectos
-1. **Análisis de vulnerabilidades DAST y SAST Web App PHP (Local)**
-   - OWASP Top 10
-   - Uso de OWASP ZAP, Nikto, sqlmap y Semgrep
-   - Identificación y documentación de fallos y vulnerabilidades
+4. **SIEM Lab with Wazuh**
+   - Configuration of Wazuh and endpoints
+   - Troubleshooting
+   - Event analysis
+  
+5. **SIEM Alert Analysis with LetsDefend**
+   - Performing initial triage of security alerts
+   - Multiple investigations of different types of alerts, such as:
+      - Malware
+      - Brute Force
+      - Unauthorized access
+      - Ransomware
+      - Etc.       
 
-2. **SQL Injection básico en entorno controlado**
-   - Montado con DVWA
-   - Explotación segura y recomendaciones
+## 📬 Contact
 
-3. **Escaneo de dependencias y librerías vulnerables**
-   - PHP + Composer
-   - Reportes de CVEs y sugerencias de mitigación
-
-4. **Pentesting básico – Webgoat y OWASP Juice Shop**
-   - Ataques controlados
-   - Reportes con metodología PTES
-
-4. **Laboratorio SIEM con Wazuh**
-   - Monitoreo de endpoints
-   - Reportes de incidentes
-   - Triage basico
-
-## 📬 Contacto
+Translated with DeepL.com (free version)
 - LinkedIn: https://www.linkedin.com/in/alvaro-mendez-mesen-a55526258/
