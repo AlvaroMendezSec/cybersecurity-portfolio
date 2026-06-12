@@ -278,17 +278,9 @@ Additional endpoint activity showed the execution of several Windows utilities c
 
 Based on the collected evidence, the alert was classified as a True Positive and escalated for further investigation.
 
-Alert Information
-Field	Value
-Alert Name	SOC145 - Ransomware Detected
-Severity	Critical
-Hostname	MarkPRD
-Host IP	172.16.17.88
-File Name	ab.exe
-File Hash (MD5)	0b486fe0503524cfe4726a4022fa6a68
-Action	Allowed
-Investigation Process
-Step 1 – Threat Intelligence Validation
+![Alert](./Evidence/Alert.png)
+
+### Step 1 – Threat Intelligence Validation
 
 The file hash associated with the alert was analyzed using VirusTotal.
 
