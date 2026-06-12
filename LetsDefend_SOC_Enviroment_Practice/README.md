@@ -332,11 +332,11 @@ No malicious indicators were identified among those processes.
 
 Indicators of Compromise (IOC)
 - File Indicators
-- Type	Value
+- Type |	Value
 - Filename	ab.exe
 - MD5	0b486fe0503524cfe4726a4022fa6a68
 - Host Indicators
-- Type	Value
+- Type |	Value
 - Hostname	MarkPRD
 - IP Address	172.16.17.88
 - Behavioral Indicators
