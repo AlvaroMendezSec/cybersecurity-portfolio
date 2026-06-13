@@ -541,7 +541,7 @@ The attacker appears to have intentionally chosen a filename visually similar to
 
 T1036 – Masquerading
 
-Phase 3 – Privilege Escalation Verification
+### Phase 3 – Privilege Escalation Verification
 
 The most significant finding occurred after execution of the malicious binary.
 
