@@ -469,6 +469,10 @@ The file hash was analyzed using VirusTotal.
   - 44/67 security vendors flagged the file as malicious.
   - Multiple detections identified the sample as Trojan.Ulise.
   - Alert description associated the sample with exploitation activity related to CVE-2024-49138.
+ 
+![Virus_total_PE](./Evidence/Virus_total_analysis_PE.png)
+
+![CVE](./Evidence/CVE.png)
 
 Assessment: The reputation analysis strongly indicated that the file represented a legitimate security threat rather than a false positive.
 
@@ -587,46 +591,60 @@ Evidence Supporting True Positive Classification
 
 The alert was classified as a True Positive based on the following evidence:
 
-Malware Indicators
-Malicious SHA256 hash.
-44 VirusTotal detections.
-Trojan.Ulise classification.
-Behavioral Indicators
-PowerShell download activity.
-Execution from a temporary directory.
-Masquerading through a deceptive filename.
-Privilege Escalation Indicators
-User context changed from Victor to NT AUTHORITY\SYSTEM.
-SYSTEM PowerShell process spawned directly from the malicious executable.
-Behavior consistent with exploitation of CVE-2024-49138.
-Indicators of Compromise (IOC)
-Host
-Hostname: Victor
-IP Address: 172.16.17.207
-File
-Filename: svohost.exe
-Path: C:\temp\service_installer\svohost.exe
-SHA256:
-b432dcf4a0f0b601b1d79848467137a5e25cab5a0b7b1224be9d3b6540122db9
-Download Source
-https://files-ld.s3.us-east-2.amazonaws.com/service-installer.zip
-MITRE ATT&CK Mapping
-Technique ID	Technique
-T1033	System Owner/User Discovery
-T1059.001	PowerShell
-T1105	Ingress Tool Transfer
-T1036	Masquerading
-T1068	Exploitation for Privilege Escalation
-Timeline
-Time	Event
-14:36:26	User executes whoami /priv
-14:36:39	User executes whoami
-14:37:10	PowerShell downloads service-installer.zip
-14:37:12	svohost.exe executed
-14:37:12	Malicious hash detected
-14:37:54	SYSTEM PowerShell process spawned by svohost.exe
-14:38+	Microsoft Defender activity observed
-Lessons Learned
+**Malware Indicators**
+
+- Malicious SHA256 hash.
+- 44 VirusTotal detections.
+- Trojan.Ulise classification.
+
+**Behavioral Indicators**
+
+- PowerShell download activity.
+- Execution from a temporary directory.
+- Masquerading through a deceptive filename.
+
+**Privilege Escalation Indicators**
+
+- User context changed from Victor to NT AUTHORITY\SYSTEM.
+- SYSTEM PowerShell process spawned directly from the malicious executable.
+- Behavior consistent with exploitation of CVE-2024-49138.
+
+**Indicators of Compromise (IOC)**
+
+**Host:**
+
+- Hostname: Victor
+- IP Address: 172.16.17.207
+
+**File**
+
+- Filename: svohost.exe
+- Path: C:\temp\service_installer\svohost.exe
+- SHA256: b432dcf4a0f0b601b1d79848467137a5e25cab5a0b7b1224be9d3b6540122db9
+
+- Download Source: https://files-ld.s3.us-east-2.amazonaws.com/service-installer.zip
+
+**MITRE ATT&CK Mapping**
+
+- Technique ID | Technique
+T1033	System Owner | User Discovery
+T1059.001	| PowerShell
+T1105	| Ingress Tool Transfer
+T1036	| Masquerading
+T1068	| Exploitation for Privilege Escalation
+
+**Timeline**
+
+Time |	Event
+14:36:26	| User executes whoami /priv
+14:36:39	| User executes whoami
+14:37:10	| PowerShell downloads service-installer.zip
+14:37:12	| svohost.exe executed
+14:37:12	| Malicious hash detected
+14:37:54	| SYSTEM PowerShell process spawned by svohost.exe
+14:38+	| Microsoft Defender activity observed
+
+### Lessons Learned
 
 This investigation demonstrated the importance of validating alerts through behavioral evidence rather than relying solely on threat intelligence.
 
