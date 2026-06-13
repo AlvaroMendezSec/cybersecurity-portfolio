@@ -445,54 +445,51 @@ Further investigation revealed that the executable was downloaded through PowerS
 
 The observed activity was consistent with exploitation behavior associated with CVE-2024-49138, leading to the classification of the alert as a True Positive.
 
-Alert Information
-Field	Value
-Alert Name	SOC335 - CVE-2024-49138 Exploitation Detected
-Severity	Medium
-Hostname	Victor
-IP Address	172.16.17.207
-User	EC2AMAZ-ILGVOIN\Victor
-Malicious Process	svohost.exe
-File Path	C:\temp\service_installer\svohost.exe
-SHA256	b432dcf4a0f0b601b1d79848467137a5e25cab5a0b7b1224be9d3b6540122db9
-Alert Classification	True Positive
-Investigation Methodology
+**Alert Information**
+
+![Alert_PE](./Evidence/Alert_PE.png)
+
+**Investigation Methodology**
 
 The investigation focused on answering three key questions:
 
-Is the detected file malicious?
-Was CVE-2024-49138 actually exploited?
-Did privilege escalation occur successfully?
-Phase 1 – Threat Intelligence Analysis
+- Is the detected file malicious?
+- Was CVE-2024-49138 actually exploited?
+- Did privilege escalation occur successfully?
+
+### Phase 1 – Threat Intelligence Analysis
 
 The file hash was analyzed using VirusTotal.
 
-Findings
-SHA256
-b432dcf4a0f0b601b1d79848467137a5e25cab5a0b7b1224be9d3b6540122db9
-Results
-44/67 security vendors flagged the file as malicious.
-Multiple detections identified the sample as Trojan.Ulise.
-Alert description associated the sample with exploitation activity related to CVE-2024-49138.
-Assessment
+**Findings**
 
-The reputation analysis strongly indicated that the file represented a legitimate security threat rather than a false positive.
+- SHA256
+- b432dcf4a0f0b601b1d79848467137a5e25cab5a0b7b1224be9d3b6540122db9
+- Results:
+  - 44/67 security vendors flagged the file as malicious.
+  - Multiple detections identified the sample as Trojan.Ulise.
+  - Alert description associated the sample with exploitation activity related to CVE-2024-49138.
 
-Phase 2 – Process Timeline Reconstruction
+Assessment: The reputation analysis strongly indicated that the file represented a legitimate security threat rather than a false positive.
+
+### Phase 2 – Process Timeline Reconstruction
+
 User Reconnaissance Activity
 
 Prior to executing the malware, the user launched PowerShell and executed the following commands:
 
-whoami /priv
-whoami
-Analysis
+- whoami /priv
+- whoami
+
+**Analysis**
 
 These commands are commonly used to:
 
-Identify the current user context.
-Enumerate available privileges.
-Verify whether privilege escalation has succeeded.
-MITRE ATT&CK
+- Identify the current user context.
+- numerate available privileges.
+- Verify whether privilege escalation has succeeded.
+
+**MITRE ATT&CK**
 
 T1033 – System Owner/User Discovery
 
@@ -505,11 +502,12 @@ https://files-ld.s3.us-east-2.amazonaws.com/service-installer.zip
 The archive was extracted to:
 
 C:\temp\service_installer\
-Analysis
+
+**Analysis**
 
 This activity indicates the delivery stage of the attack, where a payload is transferred to the victim host before execution.
 
-MITRE ATT&CK
+**MITRE ATT&CK**
 
 T1105 – Ingress Tool Transfer
 
@@ -518,24 +516,24 @@ Malware Execution
 The downloaded executable was launched:
 
 C:\temp\service_installer\svohost.exe
-Observations
 
-The filename closely resembles the legitimate Windows process:
+**Observations**
 
-svchost.exe
+The filename closely resembles the legitimate Windows process: svchost.exe
 
 However, several indicators suggested malicious intent:
 
-Indicator	Observation
-Name	svohost.exe
-Legitimate Process	svchost.exe
-Execution Directory	C:\temp
-Expected Directory	C:\Windows\System32
+- Indicator	Observation
+- Name	svohost.exe
+- Legitimate Process	svchost.exe
+- Execution Directory	C:\temp
+- Expected Directory	C:\Windows\System32
+
 Analysis
 
 The attacker appears to have intentionally chosen a filename visually similar to a legitimate Windows process in an attempt to evade casual inspection.
 
-MITRE ATT&CK
+**MITRE ATT&CK**
 
 T1036 – Masquerading
 
@@ -572,17 +570,18 @@ Victor
 └── powershell.exe
     └── svohost.exe
         └── powershell.exe (SYSTEM)
+
 Analysis
 
-This represents a privilege transition from a standard user context to the highest local privilege level available on Windows.
+- This represents a privilege transition from a standard user context to the highest local privilege level available on Windows.
 
-The parent-child relationship directly links the malicious executable to the creation of the SYSTEM-level PowerShell process.
+- The parent-child relationship directly links the malicious executable to the creation of the SYSTEM-level PowerShell process.
 
-This evidence strongly suggests successful exploitation resulting in privilege escalation.
+- This evidence strongly suggests successful exploitation resulting in privilege escalation.
 
-MITRE ATT&CK
+**MITRE ATT&CK**
 
-T1068 – Exploitation for Privilege Escalation
+- T1068 – Exploitation for Privilege Escalation
 
 Evidence Supporting True Positive Classification
 
@@ -635,7 +634,7 @@ Although the malicious hash provided an initial indication of compromise, the de
 
 The case also highlighted several common attacker techniques, including PowerShell-based payload delivery, process masquerading, and exploitation for privilege escalation.
 
-Analyst Conclusion
+### Analyst Conclusion
 
 The investigation confirmed that a malicious executable associated with Trojan.Ulise was downloaded and executed on the endpoint. Analysis of process activity demonstrated a successful transition from a standard user context to NT AUTHORITY\SYSTEM, providing strong evidence of privilege escalation.
 
