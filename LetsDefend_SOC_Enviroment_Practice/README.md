@@ -543,6 +543,7 @@ T1036 – Masquerading
 
 ### Phase 3 – Privilege Escalation Verification
 
+
 The most significant finding occurred after execution of the malicious binary.
 
 Initial Context
