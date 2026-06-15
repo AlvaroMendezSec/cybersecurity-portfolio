@@ -8,7 +8,7 @@ The goal of this Lab/Practice is to show my experience dealing with several comm
 - Phishing attempts
 - etc
 
-## Use case-001: Brute force attepmt (Hight severity alert)
+## Use case-001: Brute force attempt (Hight severity alert)
 
 ### Incident Summary
 
@@ -264,7 +264,7 @@ The reverse shell payload attempted to establish outbound communications over TC
 
 The incident was escalated due to confirmed command execution and persistence establishment on a production server. Additional forensic investigation is required to determine the extent of compromise, identify potential lateral movement, and perform containment and eradication activities.
 
-## Use case-003: Ranwomware Detected (Critical severity alert)
+## Use case-003: Ransomware Detected (Critical severity alert)
 
 SOC145 - Ransomware Detected
 
@@ -278,7 +278,7 @@ Additional endpoint activity showed the execution of several Windows utilities c
 
 Based on the collected evidence, the alert was classified as a True Positive and escalated for further investigation.
 
-![Alert](./Evidence/Alert.png)
+![Alert](./Evidence/Alert_Malware.png)
 
 ### Step 1 – Threat Intelligence Validation
 
