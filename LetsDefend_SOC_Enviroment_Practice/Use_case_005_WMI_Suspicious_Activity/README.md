@@ -10,6 +10,8 @@
 - IP Address: 172.16.17.54
 - Analyst Verdict: True Positive
 
+![AlertRAT](./Evidence/AlertRAT.png)
+
 ## Executive Summary
 
 A critical alert was generated after the detection of suspicious Windows Management Instrumentation (WMI) activity on the endpoint Desktop-Anderson. Initial investigation identified the execution of a batch script leveraging Impacket's wmiexec.py, a tool commonly used by administrators, penetration testers, and threat actors for remote command execution.
