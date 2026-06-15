@@ -10,7 +10,7 @@
 - IP Address: 172.16.17.54
 - Analyst Verdict: True Positive
 
-![AlertRAT](./Evidence/AlertRAT.png)
+![Test Image](./Evidence/AlertRAT.png)
 
 ## Executive Summary
 
