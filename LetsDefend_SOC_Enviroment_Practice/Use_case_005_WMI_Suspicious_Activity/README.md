@@ -10,7 +10,7 @@
 - IP Address: 172.16.17.54
 - Analyst Verdict: True Positive
 
-![AlertRAT](./LetsDefend_SOC_Enviroment_Practice/Evidence/AlertRAT.png)
+![AlertRAT](./Evidence/AlertRAT.png)
 
 ## Executive Summary
 
