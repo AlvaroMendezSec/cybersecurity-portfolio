@@ -55,6 +55,7 @@ Several characteristics immediately raised suspicion:
 | ports          | Network communication capability |
 | pid            | Process tracking functionality   |
 
+![suspicious_services_exe](./Evidence/suspicious_services_exe.png)
 
 The presence of rat.New strongly suggested that the binary was designed as a Remote Access Trojan.
 
