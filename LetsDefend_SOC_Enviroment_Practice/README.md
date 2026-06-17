@@ -435,7 +435,7 @@ The case also demonstrated that SOC Analysts often need to make escalation decis
 
 ## Use case-004: Privilege Escalation (Medium severity alert)
 
-SOC335 – CVE-2024-49138 Exploitation Detected
+### SOC335 – CVE-2024-49138 Exploitation Detected
 
 ### Incident Summary
 
