@@ -72,22 +72,22 @@ The observed activity closely matches known ClickFix campaigns:
 
 Investigation identified suspicious communications involving external infrastructure.
 
-Source	| Destination	| Port
-172.16.17.216 |	132.232.40.201 |	SMTP
-Affected Host |	overcoatpassably.shop |	HTTP/HTTPS
+- Source	| Destination	| Port
+- 172.16.17.216 |	132.232.40.201 |	SMTP
+- Affected Host |	overcoatpassably.shop |	HTTP/HTTPS
 
 The observed traffic was consistent with malware delivery behavior.
 
 Indicators of Compromise (IoCs)
 
-IP Addresses | IOC	Description
+- IP Addresses | IOC	Description
 
-132.232.40.201 | Malicious SMTP Source IP associated with Lumma Stealer Domains
+- 132.232.40.201 | Malicious SMTP Source IP associated with Lumma Stealer Domains
 
-IOC	 | Description
-windows-update.site |	Phishing domain
-overcoatpassably.shop |	Payload delivery infrastructure
-Email Addresses: update@windows-update.site
+- IOC	 | Description
+- windows-update.site |	Phishing domain
+- overcoatpassably.shop |	Payload delivery infrastructure
+- Email Addresses | update@windows-update.site
 
 Commands Observed
 
@@ -107,14 +107,15 @@ Later	SOC338 alert generated
 Later	Investigation completed and escalated
 
 ### MITRE ATT&CK Mapping
-Tactic |	Technique	ID
-Initial Access	Phishing |	T1566
-Execution	User Execution: Malicious Link | T1204.001
-Execution	PowerShell |	T1059.001
-Defense Evasion	Obfuscated Files or Information |	T1027
-Defense Evasion	Signed Binary Proxy Execution: Mshta | T1218.005
-Command and Control	Ingress Tool Transfer	| T1105
-Credential Access	Credentials from Web Browsers |	T1555.003
+
+- Tactic |	Technique	ID
+- Initial Access	Phishing |	T1566
+- Execution	User Execution: Malicious Link | T1204.001
+- Execution	PowerShell |	T1059.001
+- Defense Evasion	Obfuscated Files or Information |	T1027
+- Defense Evasion	Signed Binary Proxy Execution: Mshta | T1218.005
+- Command and Control	Ingress Tool Transfer	| T1105
+- Credential Access	Credentials from Web Browsers |	T1555.003
 
 ### Final Classification
 
