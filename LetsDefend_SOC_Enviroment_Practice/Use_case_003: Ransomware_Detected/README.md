@@ -10,7 +10,7 @@ Additional endpoint activity showed the execution of several Windows utilities c
 
 Based on the collected evidence, the alert was classified as a True Positive and escalated for further investigation.
 
-![Alert](./Evidence/Alert_Malware.png)
+![Alert](../Evidence/Alert_Malware.png)
 
 ### Step 1 – Threat Intelligence Validation
 
