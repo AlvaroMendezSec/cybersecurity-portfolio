@@ -169,7 +169,7 @@ Based on the available evidence, the infrastructure appears prepared for phishin
 | Escalation            | Recommended monitoring and blocking                           |
 
 
-##Analyst Conclusion
+## Analyst Conclusion
 
 The investigation confirmed that the domain letsdefwnd[.]io was intentionally registered to imitate the legitimate LetsDefend domain. The presence of an active MX record indicates preparation for email-based phishing operations.
 
