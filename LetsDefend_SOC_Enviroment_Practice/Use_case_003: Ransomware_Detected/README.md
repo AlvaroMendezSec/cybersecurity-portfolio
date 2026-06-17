@@ -23,7 +23,7 @@ The file hash associated with the alert was analyzed using VirusTotal.
 - Avaddon
 - DelShad
 
-![Alert](./Evidence/Virus_total_analysis.png)
+![Alert](../Evidence/Virus_total_analysis.png)
 
 **Conclusion**
 
@@ -40,7 +40,7 @@ The following processes were observed after the ransomware execution:
 - wbadmin.exe
 - bcdedit.exe
 
-![Alert](./Evidence/Events_captured.png)
+![Alert](../Evidence/Events_captured.png)
 
 These utilities are frequently leveraged by ransomware operators to:
 
