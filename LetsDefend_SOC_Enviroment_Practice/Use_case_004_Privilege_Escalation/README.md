@@ -10,7 +10,7 @@ The observed activity was consistent with exploitation behavior associated with 
 
 **Alert Information**
 
-![Alert_PE](./Evidence/Alert_PE.png)
+![Alert_PE](../Evidence/Alert_PE.png)
 
 **Investigation Methodology**
 
@@ -33,9 +33,9 @@ The file hash was analyzed using VirusTotal.
   - Multiple detections identified the sample as Trojan.Ulise.
   - Alert description associated the sample with exploitation activity related to CVE-2024-49138.
  
-![Virus_total_PE](./Evidence/Virus_total_analysis_PE.png)
+![Virus_total_PE](../Evidence/Virus_total_analysis_PE.png)
 
-![CVE](./Evidence/CVE.png)
+![CVE](../Evidence/CVE.png)
 
 Assessment: The reputation analysis strongly indicated that the file represented a legitimate security threat rather than a false positive.
 
@@ -100,7 +100,7 @@ The attacker appears to have intentionally chosen a filename visually similar to
 
 ### Phase 3 – Privilege Escalation Verification
 
-![Terminal](./Evidence/Terminal_History.png)
+![Terminal](../Evidence/Terminal_History.png)
 
 The most significant finding occurred after execution of the malicious binary.
 
