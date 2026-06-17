@@ -10,7 +10,7 @@
 - IP Address: 172.16.17.54
 - Analyst Verdict: True Positive
 
-![Test Image](./Evidence/AlertRAT.png)
+![Test Image](../Evidence/AlertRAT.png)
 
 ## Executive Summary
 
@@ -55,7 +55,7 @@ Several characteristics immediately raised suspicion:
 | ports          | Network communication capability |
 | pid            | Process tracking functionality   |
 
-![suspicious_services_exe](./Evidence/suspicious_services_exe.png)
+![suspicious_services_exe](../Evidence/suspicious_services_exe.png)
 
 The presence of rat.New strongly suggested that the binary was designed as a Remote Access Trojan.
 
