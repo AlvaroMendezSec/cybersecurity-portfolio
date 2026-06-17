@@ -35,13 +35,13 @@ The source IP address: 132.232.40.201
 
 - Was identified by LetsDefend Threat Intelligence as malicious infrastructure associated with Lumma Stealer activity.
 
-= This significantly increased confidence that the alert represented a genuine threat.
+- This significantly increased confidence that the alert represented a genuine threat.
 
 ### 3. Browser History Review
 
 - Investigation revealed that the user accessed the following website: windows-update.site
 
-= This confirmed direct interaction with the phishing campaign.
+- This confirmed direct interaction with the phishing campaign.
 
 ### 4. PowerShell Analysis
 
