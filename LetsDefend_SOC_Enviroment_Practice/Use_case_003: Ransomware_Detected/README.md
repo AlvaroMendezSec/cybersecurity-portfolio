@@ -1,4 +1,4 @@
-SOC145 - Ransomware Detected
+## SOC145 - Ransomware Detected
 
 ### Incident Summary
 
