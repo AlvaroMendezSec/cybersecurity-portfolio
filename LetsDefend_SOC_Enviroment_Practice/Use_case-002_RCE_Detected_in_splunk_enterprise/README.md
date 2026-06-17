@@ -1,4 +1,4 @@
-SOC239 - Remote Code Execution Detected in Splunk Enterprise
+## SOC239 - Remote Code Execution Detected in Splunk Enterprise
 
 ### Incident Summary
 
