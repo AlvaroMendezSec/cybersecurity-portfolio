@@ -8,17 +8,17 @@ Correlation between email telemetry, browser history, endpoint activity, network
 
 ## Alert Information
 
-Field |	Value
-Event ID |	316
-Rule |	SOC338 - Lumma Stealer - DLL Side-Loading via ClickFix Phishing
-Severity	| Critical
-Date	| March 13, 2025 - 09:44 AM
-Level	| Security Analyst
-SMTP IP	| 132.232.40.201
-Sender	|update@windows-update.site
-Recipient |	dylan@letsdefend.io
-Subject |	Upgrade your system to Windows 11 Pro for FREE
-Action	| Allowed
+- Field |	Value
+- Event ID |	316
+- Rule |	SOC338 - Lumma Stealer - DLL Side-Loading via ClickFix Phishing
+- Severity	| Critical
+- Date	| March 13, 2025 - 09:44 AM
+- Level	| Security Analyst
+- SMTP IP	| 132.232.40.201
+- Sender	|update@windows-update.site
+- Recipient |	dylan@letsdefend.io
+- Subject |	Upgrade your system to Windows 11 Pro for FREE
+- Action	| Allowed
 
 
 ## Investigation Methodology
@@ -27,7 +27,7 @@ Action	| Allowed
 
 - The sender used a domain designed to impersonate Microsoft-related services: update@windows-update.site
 
-= Additionally, the email subject offered a free Windows 11 Pro upgrade, a common social engineering lure used to entice users into interacting with malicious content.
+- Additionally, the email subject offered a free Windows 11 Pro upgrade, a common social engineering lure used to entice users into interacting with malicious content.
 
 ### 2. Threat Intelligence Validation
 
