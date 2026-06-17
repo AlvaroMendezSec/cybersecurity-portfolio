@@ -1,6 +1,6 @@
 # SOC Case Study #5 – Impersonating Domain MX Record Change Detected
 
-##Incident Summary
+## Incident Summary
 
 A security alert was generated after detecting a modification to the MX record of a domain impersonating the legitimate LetsDefend domain.
 
