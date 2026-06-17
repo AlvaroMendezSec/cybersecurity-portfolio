@@ -58,17 +58,13 @@ These commands are commonly used to:
 
 **MITRE ATT&CK**
 
-T1033 – System Owner/User Discovery
+- T1033 – System Owner/User Discovery
 
-Malware Download
+- Malware Download
 
-Shortly afterward, PowerShell downloaded an archive from:
+- Shortly afterward, PowerShell downloaded an archive from: https://files-ld.s3.us-east-2.amazonaws.com/service-installer.zip
 
-https://files-ld.s3.us-east-2.amazonaws.com/service-installer.zip
-
-The archive was extracted to:
-
-C:\temp\service_installer\
+The archive was extracted to: C:\temp\service_installer\
 
 **Analysis**
 
@@ -76,13 +72,11 @@ This activity indicates the delivery stage of the attack, where a payload is tra
 
 **MITRE ATT&CK**
 
-T1105 – Ingress Tool Transfer
+- T1105 – Ingress Tool Transfer
 
-Malware Execution
+- Malware Execution
 
-The downloaded executable was launched:
-
-C:\temp\service_installer\svohost.exe
+The downloaded executable was launched: C:\temp\service_installer\svohost.exe
 
 **Observations**
 
@@ -102,7 +96,7 @@ The attacker appears to have intentionally chosen a filename visually similar to
 
 **MITRE ATT&CK**
 
-T1036 – Masquerading
+- T1036 – Masquerading
 
 ### Phase 3 – Privilege Escalation Verification
 
@@ -192,22 +186,22 @@ The alert was classified as a True Positive based on the following evidence:
 **MITRE ATT&CK Mapping**
 
 - Technique ID | Technique
-T1033	System Owner | User Discovery
-T1059.001	| PowerShell
-T1105	| Ingress Tool Transfer
-T1036	| Masquerading
-T1068	| Exploitation for Privilege Escalation
+- T1033	System Owner | User Discovery
+- T1059.001	| PowerShell
+- T1105	| Ingress Tool Transfer
+- T1036	| Masquerading
+- T1068	| Exploitation for Privilege Escalation
 
 **Timeline**
 
-Time      |	Event
-14:36:26	| User executes whoami /priv
-14:36:39	| User executes whoami
-14:37:10	| PowerShell downloads service-installer.zip
-14:37:12	| svohost.exe executed
-14:37:12	| Malicious hash detected
-14:37:54	| SYSTEM PowerShell process spawned by svohost.exe
-14:38+	  | Microsoft Defender activity observed
+- Time      |	Event
+- 14:36:26	| User executes whoami /priv
+- 14:36:39	| User executes whoami
+- 14:37:10	| PowerShell downloads service-installer.zip
+- 14:37:12	| svohost.exe executed
+- 14:37:12	| Malicious hash detected
+- 14:37:54	| SYSTEM PowerShell process spawned by svohost.exe
+- 14:38+	  | Microsoft Defender activity observed
 
 ### Lessons Learned
 
