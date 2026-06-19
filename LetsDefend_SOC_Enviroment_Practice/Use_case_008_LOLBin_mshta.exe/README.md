@@ -20,7 +20,7 @@ The alert was classified as a True Positive and escalated for incident response.
 | Command Line   | C:/Windows/System32/mshta.exe C:/Users/Roberto/Desktop/Ps1.hta |
 | Reputation     | Low Reputation HTA                                             |
 
-**imagen**
+**i![Alert_LOLBin](../Evidence/Alert_LOLBin.png)**
 
 ## Investigation Process
 
@@ -40,7 +40,7 @@ The HTA file hash was investigated.
 | Detection Name | Trojan.Valyria/Powershell         |
 | Verdict        | Suspicious                        |
 
-**imagen**
+![Trojan](../Evidence/Trojan_Valyria.png)
 
 - Although reputation alone is not sufficient for classification, it supported the need for deeper analysis.
 
@@ -58,9 +58,11 @@ The spawned PowerShell process executed an obfuscated command.
 Decoded behavior showed the script:
 
 - Created a WebClient object.
--Connected to an external IP address.
+- Connected to an external IP address.
 - Downloaded remote content.
 - Attempted to execute it in memory using IEX.
+
+![Trojan](../Evidence/Command_executed.png)
 
 **Relevant fragments:**
 
@@ -77,6 +79,8 @@ Firewall logs showed outbound communication attempts from the affected endpoint.
 | Source IP    | Destination IP | Port | Resource    |
 | ------------ | -------------- | ---- | ----------- |
 | 172.16.17.38 | 193.142.58.23  | 80   | /Server.txt |
+
+![Trojan](../Evidence/Net_Log.png)
 
 Observed request: http://193.142.58.23/Server.txt
 
