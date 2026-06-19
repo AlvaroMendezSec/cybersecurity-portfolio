@@ -1,4 +1,4 @@
-# SOC164 - Suspicious Mshta Behavior
+# SOC164 - Suspicious Mshta,exe Behavior
 
 ## Executive Summary
 
