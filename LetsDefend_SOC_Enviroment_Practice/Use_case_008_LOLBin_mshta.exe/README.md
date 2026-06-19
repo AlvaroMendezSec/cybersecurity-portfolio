@@ -20,7 +20,7 @@ The alert was classified as a True Positive and escalated for incident response.
 | Command Line   | C:/Windows/System32/mshta.exe C:/Users/Roberto/Desktop/Ps1.hta |
 | Reputation     | Low Reputation HTA                                             |
 
-**i![Alert_LOLBin](../Evidence/Alert_LOLBin.png)**
+![Alert_LOLBin](../Evidence/Alert_LOLBin.png)
 
 ## Investigation Process
 
