@@ -27,7 +27,7 @@ The activity was classified as a True Positive SQL Injection attack.
 | Tool Identified | sqlmap 1.7.2                    |
 | Disposition     | True Positive                   |
 
-**IMAGEN**
+![Alert_SQLi](../Evidence/Alert_SQLi.png)
 
 ## Investigation Process
 
@@ -53,6 +53,8 @@ GET /index.php?id=1 AND EXTRACTVALUE(...)
 User-Agent: sqlmap/1.7.2
 
 The User-Agent clearly identified the tool used during the attack: sqlmap/1.7.2#stable
+
+![SQLi](../Evidence/.Raw_Log.png)
 
 ### 3. SQL Injection Validation
 
@@ -149,6 +151,8 @@ No evidence was available to confirm data exfiltration or successful command exe
 | 12:53:09   | Database response validation                 |
 | 12:53:10   | Advanced SQL payload execution               |
 | 12:53:10   | sqlmap enumeration attempts continue         |
+
+![Alert_SQLi](../Evidence/Logs.png)
 
 ### Findings
 
