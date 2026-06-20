@@ -141,16 +141,16 @@ No evidence was available to confirm data exfiltration or successful command exe
 
 ## Attack Timeline
 
-| Time (UTC) | Activity                                     |
-| ---------- | -------------------------------------------- |
-| 12:51:45   | Automated attack begins                      |
-| 12:53:45   | UNION SELECT payload observed                |
-| 12:53:07   | Input validation testing                     |
-| 12:53:08   | Boolean-based SQL Injection testing          |
-| 12:53:09   | Error-based SQL Injection using EXTRACTVALUE |
-| 12:53:09   | Database response validation                 |
-| 12:53:10   | Advanced SQL payload execution               |
-| 12:53:10   | sqlmap enumeration attempts continue         |
+| Time (UTC) | Activity                                |
+| ---------- | ----------------------------------------|
+| 12:51 | Automated attack begins                      |
+| 12:53 | UNION SELECT payload observed                |
+| 12:53 | Input validation testing                     |
+| 12:53 | Boolean-based SQL Injection testing          |
+| 12:53 | Error-based SQL Injection using EXTRACTVALUE |
+| 12:53 | Database response validation                 |
+| 12:53 | Advanced SQL payload execution               |
+| 12:53 | sqlmap enumeration attempts continue         |
 
 ![Alert_SQLi](../Evidence/Logs.png)
 
