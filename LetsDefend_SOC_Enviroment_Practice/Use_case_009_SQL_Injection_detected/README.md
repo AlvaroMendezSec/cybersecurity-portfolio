@@ -54,7 +54,7 @@ User-Agent: sqlmap/1.7.2
 
 The User-Agent clearly identified the tool used during the attack: sqlmap/1.7.2#stable
 
-![SQLi](../Evidence/.Raw_Log.png)
+![SQLi](../Evidence/Raw_Log.png)
 
 ### 3. SQL Injection Validation
 
