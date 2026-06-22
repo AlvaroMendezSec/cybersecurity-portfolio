@@ -85,7 +85,7 @@ This means the event was not merely passive VPN traffic or page browsing — it 
 
 Email security logs provided strong supporting evidence. Three separate MFA OTP emails were sent to monica@letsdefend.io within minutes of the VPN activity.
 
-![Alert_PE](../Evidence/Alert_VPN_UA.png)
+![Alert_PE](../Evidence/Mult_mails_OTP_code.png)
 
 One of the OTP emails included the following metadata:
 
@@ -102,7 +102,7 @@ This is a major piece of evidence because it confirms:
 - the activity originated from the suspicious source IP
 - the location was tied to Hanoi, Vietnam
 
-**image_mail_content**
+![Alert_PE](../Evidence/Email_content.png)
 
 ### 5) Threat Intelligence Enrichment
 
@@ -125,6 +125,8 @@ Although 7/91 detections alone are not enough to prove maliciousness, this conte
 - unauthorized geolocation.
 
 Threat intelligence was therefore treated as supporting evidence, not the sole basis for classification.
+
+![Alert_PE](../Evidence/TI_UA_IP.png)
 
 ### 6) Endpoint Command History – Excluded from Final Assessment
 
