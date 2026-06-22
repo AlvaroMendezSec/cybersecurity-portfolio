@@ -136,7 +136,7 @@ During the investigation, command history from the related endpoint showed sever
 
 However, these commands were not used as evidence for the final case classification.
 
-** Reason for exclusion**
+**Reason for exclusion**
 
 - Their timestamps were inconsistent with the VPN authentication timeline.
 - There was no evidence of a successful MFA bypass.
@@ -179,11 +179,10 @@ For portfolio accuracy, this case was intentionally documented as a VPN unauthor
 
 ### MITRE ATT&CK Mapping
 
-| Tactic                                   | Technique                                      | ID               | Why it fits                                                                                                             |
-| ---------------------------------------- | ---------------------------------------------- | ---------------- | --------------------------------------------------------------------------=
-| Credential Access                        | Brute Force                                    | T1110            | Repeated VPN authentication attempts and OTP challenge generation against a valid user account                         |
-| Initial Access                           | Valid Accounts                                 | T1078            | The activity targeted a legitimate corporate account (monica@letsdefend.io) through the VPN authentication portal      |
-| Defense Evasion / Access Attempt Context | Multi-Factor Authentication Request Generation | N/A (contextual) | Repeated OTP generation indicates interaction with the MFA stage of authentication, even though bypass was not successful |
+| Tactic                                   | Technique                                     | ID              |                                                                                
+| ---------------------------------------- | --------------------------------------------- | ---------------  | ------------------------------------------------------------------ |Credential Access                         | Brute Force                                   | T1110            |               
+| Initial Access                           | Valid Accounts                                 | T1078           | 
+| Defense Evasion / Access Attempt Context | Multi-Factor Authentication Request Generation | N/A (contextual)| 
 
 Note: I would not over-map this case to Discovery or Lateral Movement because there is no reliable evidence of successful access or post-login activity tied to this incident.
 
