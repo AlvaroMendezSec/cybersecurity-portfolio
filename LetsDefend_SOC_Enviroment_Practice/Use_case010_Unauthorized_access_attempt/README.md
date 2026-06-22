@@ -63,7 +63,7 @@ between approximately:
 
 - This pattern strongly suggested repeated authentication attempts, not a one-time legitimate access.
 
-![Alert_PE](../Evidence/Raw_Log.png)
+![Alert_PE](../Evidence/Logs_VPN_UA.png)
 
 ### 3) Failed OTP / MFA Validation
 
