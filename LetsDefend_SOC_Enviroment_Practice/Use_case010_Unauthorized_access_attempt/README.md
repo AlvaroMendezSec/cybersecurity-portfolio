@@ -85,7 +85,7 @@ This means the event was not merely passive VPN traffic or page browsing — it 
 
 Email security logs provided strong supporting evidence. Three separate MFA OTP emails were sent to monica@letsdefend.io within minutes of the VPN activity.
 
-![Log_incorrect](../Evidence/Mult_mails_otp.png)
+![Alert_PE](../Evidence/Mult_mails_otp.png)
 
 One of the OTP emails included the following metadata:
 
