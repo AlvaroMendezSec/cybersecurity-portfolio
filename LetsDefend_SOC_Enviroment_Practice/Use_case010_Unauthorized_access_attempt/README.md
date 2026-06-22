@@ -179,10 +179,8 @@ For portfolio accuracy, this case was intentionally documented as a VPN unauthor
 
 ### MITRE ATT&CK Mapping
 
-| Tactic                                   | Technique                                     | ID              |                                                                                
-| ---------------------------------------- | --------------------------------------------- | ---------------  | ------------------------------------------------------------------ |Credential Access                         | Brute Force                                   | T1110            |               
-| Initial Access                           | Valid Accounts                                 | T1078           | 
-| Defense Evasion / Access Attempt Context | Multi-Factor Authentication Request Generation | N/A (contextual)| 
+- T1110 (Brute Force): Credential Access
+- T1078 (Valid Accounts): Initial Access 
 
 Note: I would not over-map this case to Discovery or Lateral Movement because there is no reliable evidence of successful access or post-login activity tied to this incident.
 
