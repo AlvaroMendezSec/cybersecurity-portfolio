@@ -25,7 +25,7 @@ Important note: Although some suspicious endpoint command history was observed o
 | Final Classification | True Positive                                                                                         |
 | Incident Summary     | Attempted unauthorized VPN authentication with repeated MFA OTP generation and failed OTP submissions |
 
-**imagen**
+![Alert_PE](../Evidence/Alert_VPN_UA.png)
 
 ## Investigation Process
 
@@ -63,6 +63,8 @@ between approximately:
 
 - This pattern strongly suggested repeated authentication attempts, not a one-time legitimate access.
 
+![Alert_PE](../Evidence/Raw_Log.png)
+
 ### 3) Failed OTP / MFA Validation
 
 A critical authentication log showed:
@@ -76,6 +78,8 @@ A critical authentication log showed:
 This was an important finding because it confirmed that the actor reached the MFA stage of the VPN authentication flow but failed to provide the correct OTP.
 
 This means the event was not merely passive VPN traffic or page browsing — it was an active authentication attempt against a real user account.
+
+![Alert_PE](../Evidence/Log_incorrect_OTP_code.png)
 
 ### 4) Email Security Evidence – MFA OTP Emails
 
