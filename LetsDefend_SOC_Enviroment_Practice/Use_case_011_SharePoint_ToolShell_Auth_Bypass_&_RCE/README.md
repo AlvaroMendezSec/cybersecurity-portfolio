@@ -210,6 +210,17 @@ The decision to classify this incident as a True Positive was based on the corre
 
 ## **MITRE ATT&CK**
 
+| Tactic                                                         | Technique                                                      | ID                                 | Why it applies                                                                                                                              |
+| -------------------------------------------------------------- | -------------------------------------------------------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| Initial Access                                                 | Exploit Public-Facing Application                              | T1190                              | The incident began with a suspicious external POST request targeting a SharePoint web endpoint associated with CVE-2025-53770 exploitation. |
+| Execution                                                      | Command and Scripting Interpreter: PowerShell                  | T1059.001                          | Encoded PowerShell was executed with hidden window and no profile, strongly indicating malicious script execution.                          |
+| Execution                                                      | Command and Scripting Interpreter: Windows Command Shell       | T1059.003                          | `cmd.exe` was used to write a malicious ASPX file into a SharePoint directory.                                                              |
+| Defense Evasion / Execution                                    | Signed Binary Proxy Execution / Native Utility Abuse           | T1218 / related LOLBin behavior    | Legitimate binaries such as `powershell.exe`, `cmd.exe`, and `csc.exe` were abused to execute attacker-controlled actions.                  |
+| Persistence / Execution                                        | Server Software Component: Web Shell / Malicious Web Component | T1505.003                          | Creation of `spinstall0.aspx` inside a SharePoint web path strongly suggests malicious server-side web component deployment.                |
+| Execution                                                      | Compile After Delivery                                         | T1500                              | `csc.exe` compiled `payload.cs` into `payload.exe` on the compromised server.                                                               |
+| Credential Access / Discovery / Collection (context-dependent) | Access to application secrets / configuration                  | N/A (best-fit contextual behavior) | PowerShell was used to query `MachineKeySection`, indicating access to sensitive ASP.NET configuration.                                     |
+
+
 ## Indicators of Compromise
 
 | Type        | Indicator                                                      | Notes                                                                                                                          |
