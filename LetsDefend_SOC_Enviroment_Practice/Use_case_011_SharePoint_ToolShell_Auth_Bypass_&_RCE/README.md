@@ -77,7 +77,7 @@ Terminal history from SharePoint01 revealed multiple suspicious command executio
 
 #### Suspicious Command #1 – Encoded PowerShell Execution
 
-![Test Image](../Evidence/Command_Line_01.png)
+![C2_01](../Evidence/Command_Line01.png)
 
 "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -nop -w hidden -e <base64 payload>
 
