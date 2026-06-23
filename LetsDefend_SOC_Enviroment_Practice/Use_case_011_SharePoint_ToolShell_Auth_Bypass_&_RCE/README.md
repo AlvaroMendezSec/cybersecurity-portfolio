@@ -26,7 +26,7 @@ During the investigation, additional endpoint telemetry revealed post-exploitati
 | **Alert Trigger Reason** | Suspicious unauthenticated POST request targeting ToolPane.aspx with large payload size and spoofed referer indicative of CVE-2025-53770 exploitation |
 
 
-**imagen_alert**
+![Test Image](../Evidence/Alert_Tool_Shell_RCE.png)
 
 ## Investigation Objectives
 - Validate whether the HTTP request was consistent with CVE-2025-53770 / ToolShell exploitation
@@ -39,6 +39,10 @@ During the investigation, additional endpoint telemetry revealed post-exploitati
 ### 1) Proxy / Web Traffic Analysis
 
 The first step was to review the proxy log tied to the alert source IP 107.191.58.76. Only one log entry from this specific IP was present, but it contained several meaningful indicators.
+
+![Test Image](../Evidence/Log_01_RCE.png)
+
+![Test Image](../Evidence/Log_02_RCE.png)
 
 **Observed HTTP Request:**
 
@@ -73,7 +77,7 @@ Terminal history from SharePoint01 revealed multiple suspicious command executio
 
 #### Suspicious Command #1 – Encoded PowerShell Execution
 
-**imagen_1**
+![Test Image](../Evidence/Command_Line_01.png)
 
 "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -nop -w hidden -e <base64 payload>
 
@@ -93,7 +97,7 @@ This was a strong indicator of attacker-controlled code execution on the SharePo
 
 #### Suspicious Command #2 – Compiling a Payload with csc.exe
 
-**imagen_2**
+![Test Image](../Evidence/Command_Line_02.png)
 
 "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /out:C:\Windows\Temp\payload.exe C:\Windows\Temp\payload.cs
 
@@ -117,7 +121,7 @@ This was one of the strongest indicators that the attack likely succeeded.
 
 #### Suspicious Command #3 – ASPX File Creation in SharePoint Directory
 
-**imagen_3**
+![Test Image](../Evidence/Command_Line_03.png)
 
 "C:\Windows\system32\cmd.exe" /c echo <form runat=\"server\"> ... > C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\TEMPLATE\LAYOUTS\spinstall0.aspx
 
@@ -143,7 +147,7 @@ This was the most critical host artifact identified during the investigation.
 
 #### Command #4 – Access to ASP.NET Machine Key Configuration
 
-**imagen4**
+![Test Image](../Evidence/Command_Line_04.png)
 
 "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -Command "[System.Web.Configuration.MachineKeySection]::GetApplicationConfig()"
 
