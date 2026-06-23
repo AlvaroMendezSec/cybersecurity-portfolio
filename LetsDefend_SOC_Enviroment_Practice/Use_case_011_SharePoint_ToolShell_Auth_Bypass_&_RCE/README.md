@@ -260,7 +260,7 @@ Based on the available evidence, this incident represented a high-risk compromis
 
 Although the telemetry available in LetsDefend did not expose every artifact in full detail, the combined evidence strongly suggested that the attacker moved beyond the initial exploit attempt and achieved meaningful execution on the host.
 
-## Analyst Conclusion
+## Conclusion
 
 This investigation began as a critical SharePoint exploitation alert and ended with strong evidence that the attack progressed beyond simple probing. The suspicious POST request to ToolPane.aspx was consistent with CVE-2025-53770 / ToolShell exploitation, and the endpoint evidence showed multiple post-exploitation actions on the target server, including hidden PowerShell execution, ASPX file creation, payload compilation, and access to sensitive application configuration.
 
