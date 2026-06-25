@@ -39,17 +39,4 @@ This case needed to investigate the alert across multiple telemetry sources:
 
 # Complete investigation
 
-Alert Overview
-Field	Value
-Alert Name	SOC336 - Windows OLE Zero-Click RCE Exploitation Detected (CVE-2025-21298)
-Event ID	314
-Severity	Critical
-Event Time	Feb 04, 2025, 04:18 PM
-SMTP Address	84.38.130.118
-Source Address	projectmanagement@pm.me
-Destination Address	Austin@letsdefend.io
-Email Subject	Important: Action Required for Upcoming Project Deadline
-Attachment	mail.rtf
-Attachment Hash	df993d037cdb77a435d6993a37e7750dbbb16b2df64916499845b56aa9194184
-Device Action	Allowed
-Trigger Reason	Malicious RTF attachment identified with known CVE-2025-21298 exploit pattern
+
