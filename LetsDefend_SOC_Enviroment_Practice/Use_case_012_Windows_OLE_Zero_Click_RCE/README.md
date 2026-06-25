@@ -281,7 +281,4 @@ This case reinforced several important SOC investigation concepts:
 
 ---
 
-# Short Recruiter-Friendly Summary
-
-This case demonstrates my ability to investigate a **critical malware alert** by correlating **email telemetry, threat intelligence, endpoint process activity, and proxy logs**. I validated a malicious RTF attachment, identified **Outlook spawning a suspicious ****`regsvr32.exe`**** LOLBin execution chain**, confirmed outbound traffic to attacker infrastructure, and escalated the case as a **True Positive** with a concise IR-ready summary.
 
