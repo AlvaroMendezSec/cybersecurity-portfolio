@@ -1,6 +1,6 @@
 # SOC336 - Windows OLE Zero-Click RCE Exploitation Detected (CVE-2025-21298)
 
-## Executive Summary
+# Executive Summary
 
 A critical email-based malware alert was triggered after a user received a suspicious RTF attachment associated with CVE-2025-21298. During the investigation, I confirmed that the attachment was malicious, identified Outlook spawning cmd.exe, observed regsvr32.exe LOLBin abuse to retrieve a remote .sct payload, and validated the network request to attacker-controlled infrastructure through proxy logs. The alert was classified as a True Positive and escalated for Incident Response.
 
