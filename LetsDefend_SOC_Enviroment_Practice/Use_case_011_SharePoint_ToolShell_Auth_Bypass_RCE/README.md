@@ -40,8 +40,6 @@ Based on the available evidence, the incident was classified as a **True Positiv
 | 13:08 | Payload compilation using csc.exe observed |
 | 13:09 | Malicious ASPX component creation confirmed |
 | 13:09 | ASP.NET MachineKey access detected |
-| 13:10 | Incident classified as True Positive and escalated |
-
 
 # Investigation Objectives
 
