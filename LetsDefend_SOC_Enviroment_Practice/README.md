@@ -16,6 +16,18 @@ Each case follows a structured incident response methodology, including:
 - Escalation Notes
 - Lessons Learned
 
+```mermaid
+flowchart LR
+
+Alert --> Triage
+Triage --> IOC
+IOC --> Threat_Intel
+Threat_Intel --> Log_Analysis
+Log_Analysis --> Endpoint
+Endpoint --> Verdict
+Verdict --> Escalation
+```
+
 ## Skills Demonstrated
 
 - SIEM Investigation
