@@ -35,14 +35,16 @@ Each case follows a structured incident response methodology, including:
 
 ## Featured Case Studies
 
-| Case                                     | Category   | Severity | Skills Demonstrated                       |
-| ---------------------------------------- | ---------- | -------- | ----------------------------------------- |
-| ⭐ SharePoint ToolShell Auth Bypass & RCE | Web Attack | Critical | Web Logs, PowerShell, MITRE, CVE Analysis |
-| ⭐ Windows OLE Zero Click RCE             | Malware    | Critical | Email Security, LOLBins, Threat Intel     |
-| ⭐ ClickFix Phishing                      | Exchange   | High     | Phishing, Endpoint, PowerShell            |
-| ⭐ SQL Injection                          | Web Attack | High     | SQLMap, HTTP Logs, Web Investigation      |
-| ⭐ LOLBin mshta.exe                       | LOLBin     | High     | Living-off-the-Land, Endpoint Analysis    |
-| ⭐ Unauthorized Access                    | Identity   | Low      | MFA, VPN, Threat Intel                    |
+⭐ Featured Case Studies
+
+| Case | Severity | Key Skills | Investigation |
+|------|----------|------------|---------------|
+| ⭐ SharePoint ToolShell Auth Bypass & RCE | Critical | PowerShell, CVE Analysis, Web Logs | 📂 View Report |
+| ⭐ Windows OLE Zero Click RCE | Critical | Email Security, LOLBins, Threat Intel | 📂 View Report |
+| ⭐ ClickFix Phishing | High | Phishing, Endpoint Investigation | 📂 View Report |
+| ⭐ SQL Injection | High | SQLMap, Web Logs | 📂 View Report |
+| ⭐ LOLBin mshta.exe | High | Living-off-the-Land | 📂 View Report |
+| ⭐ Unauthorized Access | Low | MFA, VPN, Threat Intel | 📂 View Report |
 
 
 ## Additional SOC Investigations
