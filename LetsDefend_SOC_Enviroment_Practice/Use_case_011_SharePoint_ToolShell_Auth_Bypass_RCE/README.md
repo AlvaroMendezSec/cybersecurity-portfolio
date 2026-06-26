@@ -12,7 +12,7 @@ Based on the available evidence, the incident was classified as a **True Positiv
 
 ![Test Image](../Evidence/Alert_Tool_Shell_RCE.png)
 
-# Alert Overview
+## Alert Overview
 
 | Field | Value |
 |---------|--------|
@@ -238,7 +238,7 @@ Given the surrounding evidence, this command was assessed as part of attacker re
 The timing strongly suggests the attacker attempted to obtain sensitive application configuration after gaining code execution.
 
 
-# Step 4 – Evidence Correlation
+## Step 4 – Evidence Correlation
 
 At this point, the investigation no longer relied on a single indicator.
 
