@@ -39,7 +39,7 @@ Each case follows a structured incident response methodology, including:
 
 | Case | Severity | Key Skills | Investigation |
 |------|----------|------------|---------------|
-| ⭐ SharePoint ToolShell Auth Bypass & RCE | Critical | PowerShell, CVE Analysis, Web Logs | 📂 [--> View](./LetsDefend_SOC_Environment_Practice/Use_case_011_SharePoint_ToolShell_Auth_Bypass_RCE/README.md) |
+| ⭐ SharePoint ToolShell Auth Bypass & RCE | Critical | PowerShell, CVE Analysis, Web Logs | [--> View](./LetsDefend_SOC_Environment_Practice/Use_case_011_SharePoint_ToolShell_Auth_Bypass_RCE/README.md) |
 | ⭐ Windows OLE Zero Click RCE | Critical | Email Security, LOLBins, Threat Intel | 📂 View Report |
 | ⭐ ClickFix Phishing | High | Phishing, Endpoint Investigation | 📂 View Report |
 | ⭐ SQL Injection | High | SQLMap exploitation detection, Web Logs | 📂 View Report |
