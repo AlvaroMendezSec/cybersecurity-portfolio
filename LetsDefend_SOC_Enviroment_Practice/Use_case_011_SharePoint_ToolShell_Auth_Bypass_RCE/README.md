@@ -270,6 +270,17 @@ Instead, multiple independent evidence sources converged into a single attack ch
 
 This direct relationship significantly increased confidence that all observed activities belonged to the same intrusion.
 
+## MITRE ATT&CK Techniques Identified
+
+| Tactic | Technique | ID | Evidence from Investigation |
+|---------|-----------|------|----------------------------|
+| Initial Access | Exploit Public-Facing Application | **T1190** | The attacker targeted the vulnerable SharePoint `ToolPane.aspx` endpoint using the ToolShell authentication bypass vulnerability (CVE-2025-53770). |
+| Execution | Command and Scripting Interpreter: PowerShell | **T1059.001** | Base64-encoded PowerShell was executed using `-nop`, `-w hidden`, and `-e`, indicating attacker-controlled script execution. |
+| Defense Evasion | Obfuscated/Compressed Files and Information | **T1027** | The malicious PowerShell payload was Base64 encoded to conceal its contents and hinder detection. |
+| Defense Evasion | Signed Binary Proxy Execution | **T1218** | Native Microsoft binaries such as `csc.exe` were abused to compile attacker-controlled payloads, blending malicious activity with legitimate system processes. |
+| Persistence | Server Software Component | **T1505.003** | A malicious ASPX component was created within the SharePoint web application to execute attacker-controlled code. |
+| Discovery | System Information Discovery | **T1082** | The attacker accessed the ASP.NET MachineKey configuration, likely gathering information about the application's cryptographic configuration. |
+| Command and Control | Ingress Tool Transfer | **T1105** | The malicious ASPX component referenced and downloaded a payload from attacker-controlled infrastructure (`107.191.58.76`). |
 
 ## Analyst Conclusion
 
