@@ -64,14 +64,14 @@ Documented investigations include:
 
 ## Techinical Skills
 
-• Security Alert Triage
-• Incident Investigation
-• Log Analysis
-• IOC Identification
-• Threat Intelligence
-• Endpoint Investigation
-• MITRE ATT&CK Mapping
-• Technical Documentation
+- Security Alert Triage
+- Incident Investigation
+- Log Analysis
+- OC Identification
+- Threat Intelligence
+- Endpoint Investigation
+- MITRE ATT&CK Mapping
+- Technical Documentation
+--- 
 
----
 - LinkedIn: https://www.linkedin.com/in/alvaro-mendez-mesen-a55526258/
