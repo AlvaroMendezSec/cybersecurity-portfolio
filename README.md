@@ -30,19 +30,19 @@ To start my career as a **SOC Analyst Tier 1 (Junior)**, applying strong knowled
 
 Documented investigations include:
 
-• Brute Force
-• Phishing
-• Malware
-• Web Attacks
-• SQL Injection
-• Unauthorized Access
-• Ransomware
-• Privilege Escalation
-• LOLBins
-• Threat Intelligence
-• Zero-Day Exploitation
+- Brute Force
+- Phishing
+- Malware
+- Web Attacks
+- SQL Injection
+- Unauthorized Access
+- Ransomware
+- Privilege Escalation
+- LOLBins
+- Threat Intelligence
+- Zero-Day Exploitation
 
-- SOC Investigations Completed: 12
+**SOC Investigations Completed: 12**
 
 - Critical Incidents: 4
 
