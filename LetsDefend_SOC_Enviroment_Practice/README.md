@@ -63,8 +63,6 @@ Verdict --> Escalation
 
 ## Featured Case Studies
 
-⭐ Featured Case Studies
-
 | Case | Severity | Key Skills | Investigation |
 |------|----------|------------|---------------|
 | ⭐ SharePoint ToolShell Auth Bypass & RCE | Critical | PowerShell, CVE Analysis, Web Logs |📂 [--> View](./Use_case_011_SharePoint_ToolShell_Auth_Bypass_RCE/README.md) |
