@@ -10,7 +10,7 @@ The compromised SharePoint server executed **Base64-encoded PowerShell**, compil
 
 Based on the available evidence, the incident was classified as a **True Positive** representing a successful exploitation attempt requiring immediate Incident Response.
 
----
+![Test Image](../Evidence/Alert_Tool_Shell_RCE.png)
 
 # Alert Overview
 
@@ -28,7 +28,6 @@ Based on the available evidence, the incident was classified as a **True Positiv
 | Detection Source | Proxy Logs |
 | Device Action | Allowed |
 
----
 
 # Investigation Timeline
 
@@ -43,7 +42,6 @@ Based on the available evidence, the incident was classified as a **True Positiv
 | 13:09 | ASP.NET MachineKey access detected |
 | 13:10 | Incident classified as True Positive and escalated |
 
----
 
 # Investigation Objectives
 
@@ -54,3 +52,237 @@ The objective of this investigation was to determine:
 - Whether post-exploitation activity occurred.
 - Whether attacker-controlled payloads were executed.
 - Whether Incident Response escalation was required.
+
+# Technical Investigation
+
+## Step 1 – Initial Alert Validation
+
+The initial alert detected an unauthenticated HTTP POST request directed to:
+
+```
+
+/_layouts/15/ToolPane.aspx
+
+```
+
+This endpoint is publicly associated with **ToolShell (CVE-2025-53770)** and has been widely abused to execute malicious payloads on vulnerable on-premises SharePoint servers.
+
+Several characteristics immediately increased the confidence level of the alert:
+
+- POST request targeting ToolPane.aspx
+- Large HTTP request body (7699 bytes)
+- Suspicious Referer header
+- Internet-originated request
+- Request matched the official ToolShell detection signature
+
+### Initial Assessment
+
+At this stage, the alert was considered highly suspicious but additional endpoint evidence was required before confirming successful exploitation.
+
+---
+
+## Step 2 – Proxy Log Analysis
+
+The proxy logs confirmed that the malicious request reached the SharePoint server.
+
+### Request Details
+
+| Field | Value |
+|------|------|
+| Method | POST |
+| Destination Port | 443 |
+| Content-Type | application/x-www-form-urlencoded |
+| Content-Length | 7699 |
+| Referer | /_layouts/SignOut.aspx |
+| User-Agent | Mozilla Firefox 120 |
+
+![Test Image](../Evidence/Log_01_RCE.png)
+
+![Test Image](../Evidence/Log_02_RCE.png)
+
+The unusually large POST body combined with the ToolPane endpoint strongly aligned with known exploitation techniques for CVE-2025-53770.
+
+### Analyst Assessment
+
+The network evidence confirmed that the attacker successfully delivered the exploit request to the SharePoint server, justifying a deeper endpoint investigation.
+
+## Step 3 – Endpoint Investigation
+
+After confirming that the exploit request reached the SharePoint server, the investigation shifted to **endpoint telemetry** to determine whether the attacker achieved code execution.
+
+The terminal history of **SharePoint01** revealed multiple suspicious commands executed shortly after the malicious HTTP request. Individually, each command would already warrant investigation; together, they formed a clear post-exploitation sequence.
+
+---
+
+### Finding 1 – Encoded PowerShell Execution
+
+**Observed Command**
+
+![C2_01](../Evidence/Command_Line01.png)
+
+```powershell
+powershell.exe -nop -w hidden -e <Base64 Payload>
+```
+
+### Why it is Suspicious
+
+Several command-line arguments immediately stood out:
+
+- **`-nop`** disables PowerShell profile loading, reducing execution artifacts.
+- **`-w hidden`** hides the PowerShell console from the user.
+- **`-e`** executes a Base64-encoded payload, concealing the actual script content.
+
+This execution pattern is frequently observed during malware execution and post-exploitation because it helps attackers evade basic detection while executing arbitrary code.
+
+### Analyst Assessment
+
+This was the **first strong indicator that the attack progressed beyond a simple exploitation attempt**. The command strongly suggests attacker-controlled PowerShell execution on the compromised SharePoint server.
+
+
+### Finding 2 – Payload Compilation using csc.exe
+
+**Observed Command**
+
+![Test Image](../Evidence/Command_Line_02.png)
+
+```cmd
+csc.exe /out:C:\Windows\Temp\payload.exe C:\Windows\Temp\payload.cs
+```
+
+### Why it is Suspicious
+
+`csc.exe` is Microsoft's legitimate C# compiler.
+
+Although completely legitimate by itself, it becomes highly suspicious when used immediately after a SharePoint exploitation attempt.
+
+The command compiles:
+
+- **Input:** `payload.cs`
+- **Output:** `payload.exe`
+
+This indicates that source code was already present on the compromised server and was compiled into an executable directly on the host.
+
+### Analyst Assessment
+
+This behavior strongly suggests that the attacker leveraged server-side execution to compile a payload locally instead of transferring a finished executable.
+
+Using native Microsoft binaries also helps blend malicious activity with legitimate operating system processes.
+
+---
+
+### Finding 3 – Malicious ASPX File Creation
+
+**Observed Command**
+
+![Test Image](../Evidence/Command_Line_03.png)
+
+```cmd
+cmd.exe /c echo (...) > spinstall0.aspx
+```
+
+The generated ASPX file referenced:
+
+```
+http://107.191.58.76/payload.exe
+```
+
+### Why it is Suspicious
+
+This finding represented the strongest artifact discovered during the investigation.
+
+The command:
+
+- created a new ASPX component inside the SharePoint web directory;
+- referenced an external payload hosted on the same attacker infrastructure identified during the original alert;
+- used native Windows utilities to stage additional malicious content.
+
+Creating executable ASPX pages inside SharePoint directories is a well-known post-exploitation technique that enables attackers to deploy web-accessible components capable of executing arbitrary server-side code.
+
+### Analyst Assessment
+
+The direct relationship between:
+
+- the original attacker IP,
+- the downloaded payload,
+- and the malicious ASPX file
+
+provided compelling evidence that exploitation had already succeeded.
+
+---
+
+### Finding 4 – ASP.NET MachineKey Access
+
+**Observed Command**
+
+![Test Image](../Evidence/Command_Line_04.png)
+
+```powershell
+[System.Web.Configuration.MachineKeySection]::GetApplicationConfig()
+```
+
+### Why it is Suspicious
+
+The command retrieves the ASP.NET MachineKey configuration used by SharePoint.
+
+Machine keys are security-sensitive because they participate in:
+
+- application authentication,
+- ViewState validation,
+- cryptographic signing,
+- protection of application secrets.
+
+Although administrators may occasionally retrieve this information for troubleshooting purposes, its execution immediately after multiple confirmed malicious actions significantly changes its context.
+
+### Analyst Assessment
+
+Given the surrounding evidence, this command was assessed as part of attacker reconnaissance and post-exploitation rather than legitimate administrative activity.
+
+The timing strongly suggests the attacker attempted to obtain sensitive application configuration after gaining code execution.
+
+
+# Step 4 – Evidence Correlation
+
+At this point, the investigation no longer relied on a single indicator.
+
+Instead, multiple independent evidence sources converged into a single attack chain.
+
+## Network Evidence
+
+✅ External attacker targeted the SharePoint ToolPane endpoint.
+
+✅ Crafted POST request matched known ToolShell exploitation patterns.
+
+
+## Endpoint Evidence
+
+✅ Encoded PowerShell execution.
+
+✅ Hidden PowerShell window.
+
+✅ Payload compilation using `csc.exe`.
+
+✅ Malicious ASPX file creation.
+
+✅ Access to ASP.NET MachineKey configuration.
+
+
+## Infrastructure Correlation
+
+✅ The malicious ASPX component referenced the same external infrastructure observed in the original exploitation request.
+
+This direct relationship significantly increased confidence that all observed activities belonged to the same intrusion.
+
+
+## Analyst Conclusion
+
+No single artifact was used to classify this incident.
+
+Instead, the investigation correlated:
+
+- proxy logs,
+- endpoint telemetry,
+- process execution history,
+- attacker infrastructure,
+- and host artifacts.
+
+The combined evidence demonstrated that the attacker progressed from **initial exploitation** to **successful post-exploitation activity**, providing high confidence that the SharePoint server had been compromised.
