@@ -1,16 +1,37 @@
-# This is my documented experience in a SOC enviroment with the blue team practice platform "LetsDefend"
+# SOC Analyst Portfolio
+### Documented Security Incident Investigations
 
-The goal of this Lab/Practice is to show my experience dealing with several common types of real simulated SOC incidents like:
+This repository contains documented Security Operations Center (SOC) investigations completed on the LetsDefend Blue Team platform.
 
-- Brute Force attacks attempts
-- Ransomware
-- Unauthorized Access
-- Privilage Scalation
-- Phishing 
-- C2
-- LOLbins
-- Persistence
-- etc
+Each case follows a structured incident response methodology, including:
+
+- Initial Alert Triage
+- IOC Identification
+- Threat Intelligence Validation
+- Log Correlation
+- Endpoint Investigation
+- Root Cause Analysis
+- MITRE ATT&CK Mapping
+- Incident Classification
+- Escalation Notes
+- Lessons Learned
+
+## Skills Demonstrated
+
+- SIEM Investigation
+- Threat Hunting
+- Threat Intelligence
+- IOC Analysis
+- Log Analysis
+- Endpoint Investigation
+- Email Security
+- Malware Analysis
+- Web Attack Investigation
+- Authentication Analysis
+- Incident Triage
+- Incident Escalation
+- MITRE ATT&CK Mapping
+- Phishing Analysis
 
 ## Featured Case Studies
 
