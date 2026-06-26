@@ -24,7 +24,7 @@ The goal of this Lab/Practice is to show my experience dealing with several comm
 | ⭐ Unauthorized Access                    | Identity   | Low      | MFA, VPN, Threat Intel                    |
 
 
-## Additional Case Studies
+## Additional SOC Investigations
 
 | Case | Category | Severity | Skills Demonstrated |
 |------|----------|----------|---------------------|
