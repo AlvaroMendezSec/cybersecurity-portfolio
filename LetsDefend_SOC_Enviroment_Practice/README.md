@@ -69,7 +69,7 @@ Verdict --> Escalation
 | ⭐ SharePoint ToolShell Auth Bypass & RCE | Critical | PowerShell, CVE Analysis, Web Logs |📂 [--> View](./Use_case_011_SharePoint_ToolShell_Auth_Bypass_RCE/README.md) |
 | ⭐ Windows OLE Zero Click RCE | Critical | Email Security, LOLBins, Threat Intel | 📂 [--> View](./Use_case_012_Windows_OLE_Zero_Click_RCE/README.md) |
 | ⭐ ClickFix Phishing | High | Phishing, Endpoint Investigation | 📂 [--> View](./Use_case_006_Click_Fix_Phishing/README.md)|
-| ⭐ SQL Injection | High | SQLMap exploitation detection, Web Logs | 📂 [--> View](./Use_case_009_SQL_Injection_detected/README.md)|
+| ⭐ SQL Injection | High | SQL Injection Analysis, Web Logs | 📂 [--> View](./Use_case_009_SQL_Injection_detected/README.md)|
 | ⭐ LOLBin mshta.exe | High | Living-off-the-Land | 📂 [--> View](./Use_case_008_LOLBin_mshta.exe/README.md)|
 | ⭐ Unauthorized Access | Low | MFA, VPN, Threat Intel | 📂 [--> View](./Use_case_010_Unauthorized_access_attempt/README.md)|
 
