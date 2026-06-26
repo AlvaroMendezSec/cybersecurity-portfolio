@@ -60,6 +60,7 @@ Verdict --> Escalation
 - Incident Escalation
 - MITRE ATT&CK Mapping
 - Phishing Analysis
+- Threat Classification
 
 ## Featured Case Studies
 
