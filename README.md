@@ -3,7 +3,15 @@
 
 CompTIA Security+ certified cybersecurity professional with hands-on experience investigating security incidents in simulated Security Operations Center (SOC) environments. This portfolio showcases practical experience in alert triage, endpoint investigation, threat intelligence validation, log correlation, and incident documentation using industry-standard Blue Team methodologies.
 
----
+### Current Focus
+
+- Blue Team Operations
+- SOC Analysis
+- Threat Detection
+- Incident Response
+- SIEM Monitoring
+- Windows Security
+- Threat Intelligence
 
 ## 🎯 Professional Objective
 To start my career as a **SOC Analyst Tier 1 (Junior)**, applying strong knowledge in security monitoring, incident investigation, and technical documentation.
@@ -18,7 +26,7 @@ To start my career as a **SOC Analyst Tier 1 (Junior)**, applying strong knowled
 - Detailed documentation of multiple incident types
 - MITRE ATT&CK mapping, IOC identification, and mitigation recommendations
 
-**[View all analyzed cases →](./LetsDefend_SOC_Enviroment_Practice/)**
+**[LetsDefend Investigation Portfolio](./LetsDefend_SOC_Enviroment_Practice/)**
 
 Documented investigations include:
 
@@ -54,15 +62,16 @@ Documented investigations include:
 
 ---
 
-## 🧠 Skills Demonstrated
+## Techinical Skills
 
-- Security alert triage and prioritization
-- Incident investigation and basic threat hunting
-- Log analysis and event correlation
-- MITRE ATT&CK Framework usage
-- Identification and documentation of Indicators of Compromise (IOCs)
-- Clear technical report writing
-- Tools: LetsDefend, Wazuh, VirusTotal, and others
+• Security Alert Triage
+• Incident Investigation
+• Log Analysis
+• IOC Identification
+• Threat Intelligence
+• Endpoint Investigation
+• MITRE ATT&CK Mapping
+• Technical Documentation
 
 ---
 - LinkedIn: https://www.linkedin.com/in/alvaro-mendez-mesen-a55526258/
