@@ -26,7 +26,7 @@ To start my career as a **SOC Analyst Tier 1 (Junior)**, applying strong knowled
 - Detailed documentation of multiple incident types
 - MITRE ATT&CK mapping, IOC identification, and mitigation recommendations
 
-**[LetsDefend Investigation Portfolio](./LetsDefend_SOC_Enviroment_Practice/)**
+**[--> View the complete SOC Investigation Portfolio](./LetsDefend_SOC_Enviroment_Practice/)**
 
 Documented investigations include:
 
