@@ -1,7 +1,7 @@
 # SOC Analyst Portfolio
 ### Documented Security Incident Investigations
 
-This repository contains documented Security Operations Center (SOC) investigations completed on the LetsDefend Blue Team platform.
+This portfolio currently contains **12 documented SOC investigations** covering multiple attack vectors including phishing, malware, web exploitation, authentication attacks, LOLBins, and zero-day vulnerabilities.
 
 Each case follows a structured incident response methodology, including:
 
@@ -66,11 +66,11 @@ Verdict --> Escalation
 
 | Case | Severity | Key Skills | Investigation |
 |------|----------|------------|---------------|
-| ⭐ SharePoint ToolShell Auth Bypass & RCE | Critical | PowerShell, CVE Analysis, Web Logs |📂 [--> View](./Use_case_011_SharePoint_ToolShell_Auth_Bypass_RCE/README.md) |
+| ⭐ SharePoint ToolShell Auth Bypass & RCE | Critical | PowerShell, Zero-Day Investigation, CVE Analysis |📂 [--> View](./Use_case_011_SharePoint_ToolShell_Auth_Bypass_RCE/README.md) |
 | ⭐ Windows OLE Zero Click RCE | Critical | Email Security, LOLBins, Threat Intel | 📂 [--> View](./Use_case_012_Windows_OLE_Zero_Click_RCE/README.md) |
 | ⭐ ClickFix Phishing | High | Phishing, Endpoint Investigation | 📂 [--> View](./Use_case_006_Click_Fix_Phishing/README.md)|
 | ⭐ SQL Injection | High | SQL Injection Analysis, Web Logs | 📂 [--> View](./Use_case_009_SQL_Injection_detected/README.md)|
-| ⭐ LOLBin mshta.exe | High | Living-off-the-Land | 📂 [--> View](./Use_case_008_LOLBin_mshta.exe/README.md)|
+| ⭐ LOLBin mshta.exe | High | LOLBins, PowerShell, Process Analysis | 📂 [--> View](./Use_case_008_LOLBin_mshta.exe/README.md)|
 | ⭐ Unauthorized Access | Low | MFA, VPN, Threat Intel | 📂 [--> View](./Use_case_010_Unauthorized_access_attempt/README.md)|
 
 
