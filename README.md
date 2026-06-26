@@ -1,12 +1,7 @@
-# Cybersecurity Portfolio – Alvaro Méndez
+# Alvaro Mendez | Cybersecurity Portfolio
+### Junior SOC Analyst • Blue Team • Security+
 
-![Security+](https://img.shields.io/badge/CompTIA-Security%2B-FF0000?style=flat&logo=comptia) 
-![LetsDefend](https://img.shields.io/badge/LetsDefend-SOC%20Analyst-blue?style=flat) 
-![GitHub](https://img.shields.io/github/stars/AlvaroMendezSec/cybersecurity-portfolio?style=social)
-
-**Junior SOC Analyst Portfolio** | Hands-on Blue Team Experience
-
-I am a cybersecurity professional transitioning into **Security Operations Center (SOC)** roles, holding the **CompTIA Security+** certification. This portfolio showcases my practical experience in alert analysis, incident triage, and threat response using professional SOC simulation platforms.
+CompTIA Security+ certified cybersecurity professional with hands-on experience investigating security incidents in simulated Security Operations Center (SOC) environments. This portfolio showcases practical experience in alert triage, endpoint investigation, threat intelligence validation, log correlation, and incident documentation using industry-standard Blue Team methodologies.
 
 ---
 
@@ -17,7 +12,7 @@ To start my career as a **SOC Analyst Tier 1 (Junior)**, applying strong knowled
 
 ## 🛠️ Featured Projects
 
-### 1. LetsDefend SOC Environment Practice
+## 1. LetsDefend SOC Environment Practice
 - Professional SOC simulation platform
 - Real-time alert triage and incident investigation
 - Detailed documentation of multiple incident types
@@ -25,17 +20,35 @@ To start my career as a **SOC Analyst Tier 1 (Junior)**, applying strong knowled
 
 **[View all analyzed cases →](./LetsDefend_SOC_Enviroment_Practice/)**
 
-**Documented scenarios so far:**
-- Brute Force Attacks
-- Remote Code Execution (RCE)
-- Ransomware
-- (Upcoming: Phishing, Malware, Privilege Escalation, Suspicious Logins, etc.)
+Documented investigations include:
 
-### 2. Wazuh SIEM Lab
+• Brute Force
+• Phishing
+• Malware
+• Web Attacks
+• SQL Injection
+• Unauthorized Access
+• Ransomware
+• Privilege Escalation
+• LOLBins
+• Threat Intelligence
+• Zero-Day Exploitation
+
+- SOC Investigations Completed: 12
+
+- Critical Incidents: 4
+
+- High Severity: 5
+
+- Medium Severity: 2
+
+- Low Severity: 1
+
+## 2. Wazuh SIEM Lab
 - Deployment and configuration of Wazuh SIEM
 - Endpoint monitoring and log analysis
-- Custom detection rules and anomaly detection
 - Troubleshooting and SIEM management
+- Sysmon integration
 
 **[View SIEM Lab →](./Laboratorio%20SIEM/)**
 
