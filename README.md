@@ -3,7 +3,7 @@
 
 CompTIA Security+ certified cybersecurity professional with hands-on experience investigating security incidents in simulated Security Operations Center (SOC) environments. This portfolio showcases practical experience in alert triage, endpoint investigation, threat intelligence validation, log correlation, and incident documentation using industry-standard Blue Team methodologies.
 
-Security+ Badge: https://www.credly.com/badges/2d89a128-69cd-49aa-83e8-24ebe44d755e/public_url
+- **Security+ Badge: https://www.credly.com/badges/2d89a128-69cd-49aa-83e8-24ebe44d755e/public_url**
 
 ### Current Focus
 
