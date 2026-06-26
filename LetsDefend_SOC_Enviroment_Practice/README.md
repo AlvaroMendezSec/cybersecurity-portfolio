@@ -31,7 +31,7 @@ Each case follows a structured incident response methodology, including:
 - SQL Injection
 - Zero-Day Exploitation
 
-### Investigation flow
+## Investigation flow
 
 ```mermaid
 flowchart LR
