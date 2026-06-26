@@ -16,6 +16,23 @@ Each case follows a structured incident response methodology, including:
 - Escalation Notes
 - Lessons Learned
 
+## Incident Categories
+
+- Web Attacks
+- Malware
+- Phishing
+- Ransomware
+- LOLBins
+- Unauthorized Access
+- Privilege Escalation
+- Brute Force
+- Threat Intelligence
+- Email Security
+- SQL Injection
+- Zero-Day Exploitation
+
+### Investigation flow
+
 ```mermaid
 flowchart LR
 
