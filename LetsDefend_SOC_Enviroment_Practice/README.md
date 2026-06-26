@@ -19,7 +19,6 @@ Each case follows a structured incident response methodology, including:
 ## Skills Demonstrated
 
 - SIEM Investigation
-- Threat Hunting
 - Threat Intelligence
 - IOC Analysis
 - Log Analysis
