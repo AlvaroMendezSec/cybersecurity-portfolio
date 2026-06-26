@@ -18,8 +18,6 @@ Security+ Badge: https://www.credly.com/badges/2d89a128-69cd-49aa-83e8-24ebe44d7
 ## 🎯 Professional Objective
 To start my career as a **SOC Analyst Tier 1 (Junior)**, applying strong knowledge in security monitoring, incident investigation, and technical documentation.
 
----
-
 ## 🛠️ Featured Projects
 
 ## 1. LetsDefend SOC Environment Practice
