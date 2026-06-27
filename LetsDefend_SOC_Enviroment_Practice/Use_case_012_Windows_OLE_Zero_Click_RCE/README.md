@@ -38,7 +38,6 @@ Based on the available evidence, the incident was classified as a **True Positiv
 | 08:06 | Endpoint investigation revealed suspicious command execution |
 | 08:06 | Proxy logs confirmed outbound connection to attacker infrastructure |
 | 08:08 | Evidence correlated across all telemetry sources |
-| 08:10 | Incident classified as True Positive and escalated |
 
 
 # Technical Investigation
