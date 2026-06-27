@@ -48,11 +48,11 @@ The investigation began by reviewing the email responsible for triggering the al
 
 The message originated from an external sender:
 
-> **projectmanagement@pm.me**
+- **projectmanagement@pm.me**
 
 with the subject:
 
-> **"Important: Action Required for Upcoming Project Deadline"**
+- **"Important: Action Required for Upcoming Project Deadline"**
 
 The email attempted to convince the recipient to review an attached project document, creating a sense of urgency commonly observed in phishing campaigns.
 
