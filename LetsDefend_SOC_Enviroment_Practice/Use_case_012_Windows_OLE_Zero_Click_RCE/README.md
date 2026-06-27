@@ -109,7 +109,6 @@ The threat intelligence strongly supported the legitimacy of the alert and signi
 
 However, reputation alone cannot confirm successful compromise. Endpoint telemetry was required to determine whether the malicious document had actually executed code on the victim's workstation.
 
-
 ## Step 3 – Endpoint Investigation
 
 After validating the malicious attachment, the investigation moved to **LetsDefend Endpoint Security** to determine whether the email resulted in code execution.
@@ -118,6 +117,8 @@ A review of the endpoint process history revealed a suspicious execution chain i
 
 
 ### Finding 1 – Outlook Spawned cmd.exe
+
+![Test Image](../Evidence/EDR_Log_OLE_RCE.png)
 
 **Observed Process Chain**
 
