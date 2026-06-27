@@ -13,6 +13,8 @@ Based on the available evidence, the incident was classified as a **True Positiv
 
 # Alert Overview
 
+![Test Image](../Evidence/Alert_Windows_OLE_RCE.png)
+
 | Field | Value |
 |---------|--------|
 | Severity | Critical |
