@@ -29,8 +29,6 @@ Based on the available evidence, the incident was classified as a **True Positiv
 | Detection Source | Email Security |
 | Device Action | Allowed |
 
-
-
 # Investigation Timeline
 
 | Time | Activity |
@@ -68,14 +66,7 @@ Several characteristics immediately increased the confidence level of the alert:
 
 ### Email Evidence
 
-| Field | Value |
-|------|------|
-| From | projectmanagement@pm.me |
-| To | Austin@letsdefend.io |
-| Subject | Important: Action Required for Upcoming Project Deadline |
-| Attachment | mail.rtf |
-| Attachment Password | infected |
-| Email Action | Allowed |
+![Test Image](../Evidence/E-mail_OLE_RCE.png)
 
 ### Analyst Assessment
 
