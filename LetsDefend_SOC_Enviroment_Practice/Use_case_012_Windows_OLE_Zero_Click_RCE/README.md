@@ -142,6 +142,8 @@ This was the first endpoint artifact indicating that the malicious email progres
 
 ### Finding 2 – LOLBin Abuse using regsvr32.exe
 
+![Test Image](../Evidence/Command_Line_OLE_RCE.png)
+
 **Observed Command**
 
 ```cmd
@@ -176,6 +178,10 @@ The final validation step focused on determining whether the suspicious endpoint
 Using **LetsDefend Log Management**, I searched for connections associated with the infrastructure referenced in the `regsvr32.exe` command.
 
 A matching proxy log confirmed that the compromised endpoint successfully contacted the remote server.
+
+![Test Image](../Evidence/Net_Log_OLE_RCE.png)
+
+![Test Image](../Evidence/Net_Log_OLE_RCE_02.png)
 
 ### Proxy Evidence
 
