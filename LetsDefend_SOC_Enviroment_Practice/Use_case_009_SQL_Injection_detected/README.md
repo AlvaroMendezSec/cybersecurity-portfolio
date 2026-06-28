@@ -40,9 +40,7 @@ Based on the available evidence, the incident was classified as a **True Positiv
 | 12:53 | UNION-based SQL Injection identified |
 | 12:53 | Database enumeration attempts observed |
 | 12:53 | Operating system command execution attempts detected |
-| 12:54 | Investigation completed and incident escalated |
 
----
 
 # Technical Investigation
 
