@@ -14,6 +14,8 @@ Based on the available evidence, the incident was classified as a **True Positiv
 
 # Alert Overview
 
+![Alert_SQLi](../Evidence/Alert_SQLi.png)
+
 | Field | Value |
 |---------|--------|
 | Severity | High |
@@ -100,6 +102,8 @@ This immediately identified the framework used during the attack.
 
 ### Web Log Evidence
 
+![SQLi](../Evidence/Raw_Log.png)
+
 | Field | Value |
 |------|------|
 | Source IP | 118.194.247.28 |
@@ -117,11 +121,12 @@ Instead, the requests originated from an automated exploitation framework specif
 
 ## Step 3 – SQL Injection Validation
 
+![Alert_SQLi](../Evidence/Logs.png)
+
 The attacker initially focused on determining whether SQL Injection was possible.
 
 Multiple payloads demonstrated different validation techniques commonly employed by sqlmap.
 
----
 
 ### Finding 1 – Boolean-Based SQL Injection
 
