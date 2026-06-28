@@ -121,7 +121,7 @@ Instead, the requests originated from an automated exploitation framework specif
 
 ## Step 3 – SQL Injection Validation
 
-![SQLi](../Evidence/Raw_Log.png)
+![SQLi](../Evidence/Raw_Log.png) --> obfuscated command log
 
 The attacker initially focused on determining whether SQL Injection was possible.
 
