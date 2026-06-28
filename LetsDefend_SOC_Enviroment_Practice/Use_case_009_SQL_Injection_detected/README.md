@@ -102,7 +102,7 @@ This immediately identified the framework used during the attack.
 
 ### Web Log Evidence
 
-![Alert_SQLi](../Evidence/Logs.png) **--> Web logs**
+![Alert_SQLi](../Evidence/Logs.png) **'--> Web logs**
 
 | Field | Value |
 |------|------|
