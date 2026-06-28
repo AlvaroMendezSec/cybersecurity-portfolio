@@ -83,7 +83,6 @@ Several characteristics immediately raised suspicion:
 
 Although phishing indicators were immediately present, the investigation required additional evidence to determine whether the recipient interacted with the campaign and whether endpoint compromise occurred.
 
----
 
 ## Step 2 – Threat Intelligence Validation
 
@@ -203,6 +202,8 @@ At this point, the investigation had enough evidence to classify the endpoint ac
 
 
 ## Step 5 – Network Activity Correlation
+
+![Test Image](../Evidence/Log_Lumma.png)
 
 The final phase of the investigation focused on validating whether the malicious PowerShell command generated outbound communication with attacker-controlled infrastructure.
 
