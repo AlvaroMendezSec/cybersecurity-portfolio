@@ -14,7 +14,7 @@ Based on the available evidence, the incident was classified as a **True Positiv
 
 # Alert Overview
 
-![Alert_SQLi](../Evidence/Alert_SQLi.png) --> obfuscated command log
+![Alert_SQLi](../Evidence/Alert_SQLi.png) **--> Initial Alert**
 
 | Field | Value |
 |---------|--------|
@@ -102,7 +102,7 @@ This immediately identified the framework used during the attack.
 
 ### Web Log Evidence
 
-![Alert_SQLi](../Evidence/Logs.png)
+![Alert_SQLi](../Evidence/Logs.png) **--> Web logs**
 
 | Field | Value |
 |------|------|
@@ -121,7 +121,7 @@ Instead, the requests originated from an automated exploitation framework specif
 
 ## Step 3 – SQL Injection Validation
 
-![SQLi](../Evidence/Raw_Log.png) --> obfuscated command log
+![SQLi](../Evidence/Raw_Log.png) **--> obfuscated command log**
 
 The attacker initially focused on determining whether SQL Injection was possible.
 
