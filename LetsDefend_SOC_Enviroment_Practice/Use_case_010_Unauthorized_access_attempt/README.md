@@ -15,6 +15,8 @@ Based on the available evidence, the incident was classified as a **True Positiv
 
 # Alert Overview
 
+![Alert_PE](../Evidence/Alert_VPN_UA.png)
+
 | Field | Value |
 |---------|--------|
 | Severity | Low |
@@ -40,7 +42,6 @@ Based on the available evidence, the incident was classified as a **True Positiv
 | 02:03 | Third MFA OTP generated |
 | 02:03 | Authentication failed (Incorrect OTP) |
 | 02:04 | SOC257 alert generated |
-| 02:05 | Investigation completed and escalated |
 
 
 # Technical Investigation
@@ -101,6 +102,8 @@ Rather than a single login attempt, the activity demonstrated multiple consecuti
 
 ### VPN Evidence
 
+![Alert_PE](../Evidence/Logs_VPN_UA.png)
+
 | Field | Value |
 |------|------|
 | Source IP | 113.161.158.12 |
@@ -117,6 +120,8 @@ Repeated login attempts strongly suggested an actor repeatedly attempting to aut
 
 
 ## Step 3 – MFA Validation
+
+![Alert_PE](../Evidence/Log_incorrect_OTP_code.png)
 
 Authentication logs revealed one of the most important findings of the investigation.
 
@@ -162,11 +167,15 @@ The remaining objective was determining whether the repeated MFA events could be
 
 The next phase focused on validating whether the VPN authentication attempts generated MFA notifications.
 
+![Alert_PE](../Evidence/Mult_mails_otp.png)
+
+
 Email Security logs revealed that the account received:
 
 - three MFA OTP emails;
 - within approximately two minutes;
 - corresponding to the authentication attempts.
+
 
 One of the messages included:
 
@@ -175,6 +184,8 @@ One of the messages included:
 - Operating System: Windows
 - Location: Hanoi, Vietnam
 - VPN Portal: vpn-letsdefend.io
+
+![Alert_PE](../Evidence/Email_content.png)
 
 ### Why this is Significant
 
@@ -191,6 +202,9 @@ Unlike relying on authentication logs alone, the email telemetry independently v
 
 ### Analyst Assessment
 
+At this stage, multiple independent telemetry sources had already confirmed that the activity represented a real unauthorized authentication attempt rather than an isolated false positive.
+
+The remaining objective was enriching the source IP through Threat Intelligence and determining whether any evidence suggested successful account compromise.
 
 ## Step 5 – Threat Intelligence Enrichment
 
@@ -203,6 +217,8 @@ The address:
 ```
 
 was analyzed using both **LetsDefend Threat Intelligence** and **VirusTotal**.
+
+![Alert_PE](../Evidence/TI_UA_IP.png)
 
 ### Threat Intelligence Findings
 
@@ -379,7 +395,6 @@ Based on the correlation of authentication logs, email telemetry, and threat int
 - Review failed MFA events across the organization for similar activity.
 - Monitor the account for future authentication attempts originating from unusual locations.
 
----
 
 # Lessons Learned
 
