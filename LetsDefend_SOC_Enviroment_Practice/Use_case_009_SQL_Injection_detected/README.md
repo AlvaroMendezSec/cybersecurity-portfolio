@@ -102,7 +102,7 @@ This immediately identified the framework used during the attack.
 
 ### Web Log Evidence
 
-![SQLi](../Evidence/Raw_Log.png)
+![Alert_SQLi](../Evidence/Logs.png)
 
 | Field | Value |
 |------|------|
@@ -121,7 +121,7 @@ Instead, the requests originated from an automated exploitation framework specif
 
 ## Step 3 – SQL Injection Validation
 
-![Alert_SQLi](../Evidence/Logs.png)
+![SQLi](../Evidence/Raw_Log.png)
 
 The attacker initially focused on determining whether SQL Injection was possible.
 
