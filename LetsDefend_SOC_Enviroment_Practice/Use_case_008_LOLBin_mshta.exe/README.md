@@ -15,6 +15,8 @@ Based on the available evidence, the incident was classified as a **True Positiv
 
 # Alert Overview
 
+![Alert_LOLBin](../Evidence/Alert_LOLBin.png)
+
 | Field | Value |
 |---------|--------|
 | Severity | High |
@@ -38,7 +40,6 @@ Based on the available evidence, the incident was classified as a **True Positiv
 | 10:29 | PowerShell created a WebClient object |
 | 10:29 | Outbound request sent to attacker infrastructure |
 | 10:29 | Remote payload intended for in-memory execution |
-| 10:29 | Incident classified as True Positive and escalated |
 
 
 # Technical Investigation
@@ -91,6 +92,8 @@ Trojan.Valyria/Powershell
 Although reputation alone cannot determine whether compromise occurred, it provided additional context supporting the suspicious nature of the file.
 
 ### Reputation Findings
+
+![Trojan](../Evidence/Trojan_Valyria.png)
 
 | Indicator | Result |
 |------|------|
@@ -155,6 +158,8 @@ The decoded script performed the following actions:
 
 ### Relevant Script Components
 
+![Trojan](../Evidence/Command_executed.png)
+
 ```powershell
 New-Object Net.WebClient
 ```
@@ -201,6 +206,8 @@ The final phase of the investigation focused on validating whether the PowerShel
 Firewall telemetry revealed that the affected endpoint attempted to retrieve remote content from the same server referenced in the PowerShell script.
 
 ### Network Evidence
+
+![Trojan](../Evidence/Net_Log.png)
 
 | Field | Value |
 |------|------|
