@@ -14,7 +14,7 @@ Based on the available evidence, the incident was classified as a **True Positiv
 
 # Alert Overview
 
-![Alert_SQLi](../Evidence/Alert_SQLi.png) **--> Initial Alert**
+![Alert_SQLi](../Evidence/Alert_SQLi.png) ** '--> Initial Alert**
 
 | Field | Value |
 |---------|--------|
