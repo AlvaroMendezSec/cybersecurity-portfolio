@@ -14,7 +14,7 @@ Based on the available evidence, the incident was classified as a **True Positiv
 
 # Alert Overview
 
-![Alert_SQLi](../Evidence/Alert_SQLi.png)
+![Alert_SQLi](../Evidence/Alert_SQLi.png) --> obfuscated command log
 
 | Field | Value |
 |---------|--------|
