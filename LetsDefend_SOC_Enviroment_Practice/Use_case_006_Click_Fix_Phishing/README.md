@@ -13,6 +13,8 @@ Based on the available evidence, the incident was classified as a **True Positiv
 
 # Alert Overview
 
+![Test Image](../Evidence/Alert_Phishing.png)
+
 | Field | Value |
 |---------|--------|
 | Severity | Critical |
@@ -127,6 +129,8 @@ Unlike many phishing alerts where delivery is observed but user interaction cann
 
 ### Browser History Evidence
 
+![Test Image](../Evidence/Site_Visited.png)
+
 | Evidence | Value |
 |------|------|
 | Visited Domain | windows-update.site |
@@ -152,6 +156,8 @@ After confirming user interaction with the phishing website, the investigation s
 The endpoint's terminal history revealed a highly suspicious PowerShell command:
 
 ### Finding 1 – Obfuscated PowerShell Execution
+
+![Test Image](../Evidence/Command_exec.png)
 
 **Observed Command**
 
