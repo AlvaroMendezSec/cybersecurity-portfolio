@@ -69,6 +69,8 @@ Several characteristics immediately raised suspicion:
 
 ### Email Evidence
 
+![Test Image](../Evidence/Lumma_Stealer_mail.png)
+
 | Field | Value |
 |------|------|
 | Sender | update@windows-update.site |
@@ -84,6 +86,8 @@ Although phishing indicators were immediately present, the investigation require
 ---
 
 ## Step 2 – Threat Intelligence Validation
+
+![Test Image](../Evidence/Threat_Intel_Lumma.png)
 
 The SMTP source IP observed in the alert was investigated using **LetsDefend Threat Intelligence**.
 
@@ -111,7 +115,6 @@ This significantly increased confidence that the phishing email belonged to an a
 Threat Intelligence independently confirmed that the sender infrastructure was already associated with Lumma Stealer campaigns.
 
 While this strongly supported the alert, infrastructure reputation alone could not determine whether the user had actually interacted with the phishing email.
-
 
 ## Step 3 – User Interaction Validation
 
