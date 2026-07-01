@@ -6,10 +6,11 @@ This hands-on lab simulates a corporate environment designed to centralize, anal
 The primary objective of this project is to gain practical, real-world experience in the daily tasks of a SOC (Security Operations Center) Analyst, covering everything from telemetry engineering to the detection of tactics and techniques outlined in the MITRE ATT&CK framework.
 
 ## Lab Architecture and Components
-Component / Role	| Operating System      |	Technical Function
-Wazuh Manager     |	Ubuntu Server 22.04   | LTS	Central server. Collects, parses, and correlates logs received through security rules.
-Domain Controller |	Windows Server 2025   |	Domain Controller (KDC Kerberos / Active Directory). Manages identities.
-Victim Endpoint	  | Windows 11 Enterprise	|Domain-joined workstation under continuous monitoring by the Wazuh agent.
+
+- Component / Role	| Operating System      |	Technical Function
+- Wazuh Manager     |	Ubuntu Server 22.04   | LTS	Central server. Collects, parses, and correlates logs received through security rules.
+- Domain Controller |	Windows Server 2025   |	Domain Controller (KDC Kerberos / Active Directory). Manages identities.
+- Victim Endpoint	  | Windows 11 Enterprise	|Domain-joined workstation under continuous monitoring by the Wazuh agent.
 
 ## Telemetry Engineering (Auditing Hardening)
 To eliminate "blind spots" in the network, advanced auditing policies were configured on the Windows operating systems, ensuring complete visibility into critical events:
